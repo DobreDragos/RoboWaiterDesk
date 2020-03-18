@@ -1,0 +1,230 @@
+VIBlend Windows Forms Controls 10.1.0 - Release Notes
+
+New: Integration with Visual Studio 2013
+
+Fixes: DataGridView Alt Key handling.
+Fixed: Button Custom Theming.
+
+
+VIBlend Windows Forms Controls 10.0.0 - Release Notes
+
+New: Integration with Visual Studio 2012
+
+Fixes: DataGridView cells selection.
+
+VIBlend Windows Forms Controls 9.0.0 - Release Notes
+
+New: DataGridView Search Capabilities
+New: Steel Theme
+
+Fixes: TreeView ExpandAll 
+Fixes: TreeView cached images.
+Fixes: TreeView TreeIndent property refresh issue.
+Fixes: TreeView CheckBoxes property refresh issue.
+Fixes: TreeView LineColor property refresh issue.
+Fixes: TreeView NodesSpacing property refresh issue.
+Fixes: TreeView ItemHeight property refresh issue.
+Fixes: TreeView IndicatorsColor property refresh issue.
+Fixes: TabControl issues regarding add and remove methods.
+Fixes: TabControl issue regarding the Tabs selection.
+Fixes: vControlBox focus issue.
+Fixes: vTreeViewBox focus issue.
+Fixes: vDateTimePicker focus issue.
+Fixes: vControlBox TextChanged event issue.
+Fixes: RibbonForm MaximizeState property issue.
+Fixes: RibbonBar issue at Design-Time when adding/removing tabs with the TabsCollection editor.
+
+
+VIBlend Windows Forms Controls 8.0.0 - Release Notes
+
+What's New:
+
+Metro Blue Theme
+Metro Green Theme
+Metro Red Theme
+Drag and Drop between TabControls
+DataGridView ColorPickerEditor
+
+What's Fixed::
+
+ComboBox and ListBox DataBinding issues.
+ComboBox and TextBox Tab key navigation behavior.  
+ComboBox AutoComplete issue. 
+TabControl - fix regarding the Remove method.
+NumericEditors - fixed event handling issues.
+DateTimePicker - rendering issue regarding the calendar selection.
+
+What's Improved:
+
+TabControl and RibbonBar performance
+Help Documentation
+DataGridView Export to Excel
+
+VIBlend Windows Forms Controls 7.0.0 - Release Notes
+
+New Control: Split Container
+
+Feature: Added Save/Load Columns Layout feature to DataGridView
+Feature: Improved DataGridView Columns auto size.
+Feature: Improved DataGridView ProgressBar editor.
+Feature: Improved DataGridView ComboBox editor.
+Feature: Improved TreeView loading performance.
+Feature: Improved DataGridView filtering capabilities and API.
+
+Fix: Resolved an issue regarding the TreeView expand/collapse behavior.
+Fix: Resolved an issue regarding the Month Calendar selection.
+Fix: Resolved an issue regarding the Month Calendar serialization/deserialization.
+Fix: Resolved an issue regarding the Oulook Navigation Pane rendering.
+Fix: Resolved an issue regarding the vLabel bounding rectangle.
+Fix: Resolved an issue regarding the DataTimeEditor control's keyboard input behavior.
+Fix: Resolved an issue regarding the ProgressBar's rendering.
+Fix: Resolved an issue regarding the StripsRenderer when a button is checked.
+Fix: Resolved an issue regarding the DateTimePicker's Null value.
+
+VIBlend Windows Forms Controls 6.0.0 - Release Notes
+
+Feature: Added data binding using Indexed properties to DataGridView.
+Feature: Added checkbox filtering to DataGridView.
+Feature: Added new case sensitive filtering comparison operators to DataGridView.
+Feature: Added support for Totals and Sub Totals to DataGridView.
+Feature: Added currency, percentage, fixed-point and number editors to DataGridView.
+Feature: Added DataGridView navigation with Home, End, PageUp, PageDown keys.
+Feature: Added ability to set a custom theme to the DataGridView CheckBoxEditor.
+Feature: Added ThreeState mode to DataGridView CheckBoxEditor
+Feature: Added support for indeterminate state in CheckedListBox.
+Feature: Added ability to set a custom header width and height to the TabControl TabPages.
+Feature: Added ability to show or hide a close button per tab page.
+Feature: Added an option to modify the animation speed in Navigation Pane.
+Feature: Added OutlookPane Localization.
+Feature: Added OutlookPane, NavigationPane and ExplorerBar header text alignment.
+Feature: Added Built-in Validation in Currency, Percentage, Fixed-Point, Number and DateTime editors.
+Feature: Added support for default text in the ComboBox 
+Feature: Improved DataGridView Localization.
+Feature: Improved the styling capabilities of the TrackBar and ProgressBar controls.
+Feature: Improved ListBox multiple selection. Added support for MultipleSimple and MiltipleExtended selection modes.
+Feature: Improved the styling capabilities of TreeView, Outlook Pane, Navigation Pane, ListBox and ExplorerBar controls.
+Feature: Improved Sorting feature of ComboBox, ListBox and CheckedListBox.
+Feature: Improved data binding of ComboBox, ListBox and CheckedListBox.
+
+Fix: Resolved an issue regarding the ComboBox TextChanged event.
+Fix: Resolved an issue regarding the ComboBox SelectedIndexChanged event.
+Fix: Resolved an issue regarding the ComboBox DropDownWidth.
+Fix: Resolved an issue regarding the GridKeyDown event of the IEditor interface.
+Fix: Resolved an issue regarding the DataGridView KeyDown event.
+Fix: Resolved an issue regarding the DataGridView single cell selection.
+Fix: Resolved an issue regarding the DataGridView numericupdown editor's initial loading.
+Fix: Resolved an issue regarding the DataGridView DateTimePicker editor
+Fix: Resolved an issue regarding the DataGridView keyboard navigation
+Fix: Resolved an issue regarding handling the Space key by the DataGridView CheckBoxEditor.
+Fix: Resolved an issue regarding the DataGridView selection and editor activation/deactivation flags.
+Fix: Resolved an issue regarding the TreeView issue regarding the selection behavior.
+Fix: Resolved an issue regarding the TabControl TabShapes property. 
+Fix: Resolved an issue regarding the TextBox GotFocus and LostFocus events.
+Fix: Resolved an issue regarding the DropDownBase DropDownOpen and DropDownClose events.
+Fix: Resolved an issue regarding the OutlookPane HideFirstGroup and ShowFirstGroup methods.
+Fix: Resolved an issue regarding the drag and drop rendering in the ListBox control.
+Fix: Resolved an issue regarding the drag and drop rendering in the TabControl.
+Fix: Resolved a Calendar issue regarding the Globalization support.
+Fix: Resolved property default value serialization issues in TabControl.
+Fix: Resolved property default value serialization issues in NavigationPane.
+Fix: Resolved property default value serialization issues in ListBox and ComboBox.
+Fix: Resolved property default value serialization issues in ExplorerBar.
+Fix: Resolved property default value serialization issues in RibbonBar.
+Fix: Resolved property default value serialization issues in OutlookNavigationPane.
+Fix: Resolved property default value serialization issues in Numeric Editors.
+Fix: Resolved a design-time issue in QuickAccessToolbar.
+Fix: Resolved a design-time issue in Navigation Pane.
+Fix: Resolved an issue regarding the RibbonGroup.ShowFooterButton property.
+Fix: Resolved an issue regarding the ComboBox BorderColor property.
+Fix: Resolved an issue regarding the OutlookPaneItem AutoSize behavior.
+Fix: Resolved an issue regarding the CheckedListBox and RadioListBox BorderColor property.
+Fix: Resolved an issue regarding the TreeView mouse capture.
+Fix: Resolved an issue regarding the MonthCalendar Decades View
+Fix: Resolved an issue regarding the RichTextBox disabled state rendering.
+
+Breaking Change: Added simpler licensing mechanism to WinForms suite, matching the one in Silverlight.  
+Breaking Change: Enhanced the GridKeyDown event arguments by adding an additional parameter.
+
+VIBlend Windows Forms Controls 5.0.0 - Release Notes
+
+1. Added 2 new Themes.
+2. Added LocalizationProvider to the DataGridView.
+3. Added 5 built-in TabPage Shapes.
+4. Added TabPage close buttons.
+5. Added DataGrid PivotDesign component.
+6. Added ListBox Drag and Drop.
+7. Fixed an issue regarding the ComboBox rendering.
+8. Fixed an issue regarding the RibbonBar Key Tips.
+9. Fixed an issue regarding the RibbonBar ApplicationButton serialization.
+10. Fixed an issue regarding the DataGridView editors.
+11. Fixed an issue regarding the DataGridView selection.
+12. Fixed an issue regarding the PercentageEditor input.
+13. Fixed an issue regarding the CurrencyEditor input.
+14. Fixed an issue regarding the ListBox keyboard navigation.
+15. Fixed an issue regarding the TabPage scrolling.
+16. Improved ApplicationButton's rendering.
+17. Improved Help Documentation.
+18. Improved TabPage rendering.
+19. Improved DateTimeEditor and DateTimePicker date/time input.
+20. Improved BubbleBar layouts.
+
+Breaking Changes:
+
+- Renamed all assemblies. 
+
+VIBlend Windows Forms Controls 4.7.0 - Release Notes
+---------------------------------------------------------------------------
+1. Added 20 new examples
+2. Added 32 How-To Tutorials
+3. Major Update of the Help Documentation
+4. Added 4 new Quick Start Mini projects
+5. Added VS 2010 Examples projects.
+6. DataGridView changes
+
+- Added Rows Grouping Panel
+- Added Columns Chooser
+- Added CheckedChanged event to the CheckBoxEditor
+- Added an ActionList in Design Time
+- Added an option to automatically open the ComboBoxEditor and DateTimePickerEditor pop up when they get active.
+- Added Resizing Tooltip which is shown when a column or row header is resized.
+- Added ContextMenuShowing event.
+- Fixed an issue regarding the control's Focus
+- Fixed an issue in the ComboBoxEditor keyboard navigation
+- Fixed an issue in the DateTimeEditor keyboard navigation
+- Fixed an issue regarding the cell images.
+
+7. TreeView - Fixed a design time issue with the Nodes collection serialization.
+8. RibbonBar Gallery - Fixed a Design time issue with the GalleryButtons collection.
+9. RibbonBar - Fixed an issue regarding the Background image of the ApplicationButton's content panel.
+10. Form - Fixed the icon rendering. ShowIcon property now affects the Form icon's rendering.
+
+VIBlend Windows Forms Controls 4.6.0 - Release Notes
+---------------------------------------------------------------------------
+
+1. Added support for Visual Studio 2010
+
+2. DataGridView changes
+
+In this version we extended the HierarhcyItem mouse click events. Previously, the grid was raising only the ItemClick and ItemDoubleClick events.
+These two events are replaced by the following set of events:
+ - HierarchyItemMouseUp
+ - HierarchyItemMouseDown
+ - HierarchyItemMouseClick
+ - HierarchyItemMouseDoubleClick
+
+We also added several improvements in the in-place cell editors' infrastructure. Specifically we added the following activation and deactivation events:
+ - Click on selected cell (MOUSE_CLICK_SELECTED_CELL)
+ - Enter key activation (KEY_PRESS_ENTER
+ - Esc key deactivation (KEY_PRESS_ESC)
+
+The default activation and deactivation flags for the built-in cell editors where modified to use the new activation events.
+
+Please, note that these are breaking changes. If you are using an earlier version of VIBlend Controls for Windows Forms you will have to make minor changes to your code.
+
+New in version 4.6 are the HierarchyItems and Cells selection changed events:
+
+ - DataGridView.HierarchyItemSelectionChanged
+ - DataGridView.CellSelectionChanged
+
+---------------------------------------------------------------------------
+If you need technical assistance, send us an email at: support@viblend.com

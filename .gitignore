@@ -1,0 +1,7 @@
+*.cache
+*.config
+*.CopyComplete
+bin
+obj
+packages
+.vs
