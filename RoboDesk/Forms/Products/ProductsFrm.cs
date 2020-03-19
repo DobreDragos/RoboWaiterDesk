@@ -26,7 +26,6 @@ namespace RoboDesk
         readonly ProductsPresenter presenter;
         public ProductsFrm()
         {
-            EditedLangToName = new Dictionary<long, string>();
             InitializeComponent();
             presenter = new ProductsPresenter(this);
 
@@ -34,7 +33,6 @@ namespace RoboDesk
             presenter.EnsureLanguages(cb_Language);
         }
 
-        private Dictionary<long, string> EditedLangToName;
         
         public DataGridView Dgv => this.dgv.DataGridView;
 
@@ -57,6 +55,8 @@ namespace RoboDesk
         public Button Btn_Cancel => this.btn_Cancel;
 
 
+        private Dictionary<long, string> EditedLangToName = new Dictionary<long, string>();
+
         public void ExecuteBackClick()
         {
             FormNavigator.OpenForm<MainFrm>(this);
@@ -65,12 +65,20 @@ namespace RoboDesk
         public void BindModelToView(Products selectedModel)
         {
             EditedLangToName = new Dictionary<long, string>();
+            
+            foreach (long lang in cb_Language.Items.Select(x => x.Value))
+            {
+                EditedLangToName[lang] = presenter.GetNameBySelectedLanguage(lang);
+            }
+
             tb_Code.Text = selectedModel.Code;
             tb_Description.Text = selectedModel.Description;
             tb_Discount.Text = selectedModel.Discount.ToString();
             tb_Price.Text = selectedModel.Price.ToString();
-            cb_Family.SelectedValue = selectedModel.IdFamily;
-
+            if (selectedModel.Id == 0) // if new then select first always
+                cb_Family.SelectedIndex = 0;
+            else
+                cb_Family.SelectedValue = selectedModel.IdFamily; 
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
             tb_Name.Text = presenter.GetNameBySelectedLanguage(selectedLangId);
         }
@@ -93,17 +101,9 @@ namespace RoboDesk
             _selectedModel.Price = Decimal.Parse(tb_Price.Text);
             _selectedModel.IdFamily = (long)cb_Family.SelectedValue;
 
+            _selectedModel.LangToName = _selectedModel.LangToName ?? new Dictionary<long, string>();
             foreach (var lang in EditedLangToName.Keys)
-            {
-                if (_selectedModel.LangToName.ContainsKey(lang))
-                {
-                    _selectedModel.LangToName[lang] = EditedLangToName[lang];
-                }
-                else
-                {
-                    _selectedModel.LangToName.Add(lang, EditedLangToName[lang]);
-                }
-            }
+                _selectedModel.LangToName[lang] = EditedLangToName[lang];
 
             return _selectedModel;
         }
@@ -111,18 +111,14 @@ namespace RoboDesk
         private void cb_Language_SelectedItemChanged(object sender, EventArgs e)
         {
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
-            tb_Name.Text = EditedLangToName.ContainsKey(selectedLangId)?
-                EditedLangToName[selectedLangId]:
-                presenter.GetNameBySelectedLanguage(selectedLangId);
+            EditedLangToName.TryGetValue(selectedLangId, out string name);
+            tb_Name.Text = name;
         }
 
         private void tb_Name_TextChanged(object sender, EventArgs e)
         {
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
-            if (EditedLangToName.ContainsKey(selectedLangId))
-                EditedLangToName[selectedLangId] = tb_Name.Text;
-            else
-                EditedLangToName.Add(selectedLangId,tb_Name.Text);
+            EditedLangToName[selectedLangId] = tb_Name.Text;
         }
     }
 }

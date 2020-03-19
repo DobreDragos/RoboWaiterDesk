@@ -115,12 +115,14 @@
             this.tb_Name.TabIndex = 19;
             this.tb_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Name.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
+            this.tb_Name.TextChanged += new System.EventHandler(this.tb_Name_TextChanged);
             // 
             // btn_Save
             // 
             this.btn_Save.AllowAnimations = true;
             this.btn_Save.BackColor = System.Drawing.Color.Transparent;
             this.btn_Save.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_Save.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Save.HoverEffectsEnabled = true;
             this.btn_Save.Location = new System.Drawing.Point(195, 20);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
@@ -131,7 +133,7 @@
             this.btn_Save.TabIndex = 23;
             this.btn_Save.Text = "SAVE";
             this.btn_Save.UseVisualStyleBackColor = false;
-            this.btn_Save.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.OFFICE2003SILVER;
+            this.btn_Save.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
             // 
             // tb_Search
             // 
@@ -162,7 +164,7 @@
             this.btn_Add.AllowAnimations = true;
             this.btn_Add.BackColor = System.Drawing.Color.Transparent;
             this.btn_Add.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_Add.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Add.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Add.HoverEffectsEnabled = true;
             this.btn_Add.Location = new System.Drawing.Point(663, 20);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
@@ -174,14 +176,14 @@
             this.btn_Add.Text = "ADD";
             this.btn_Add.UseThemeTextColor = false;
             this.btn_Add.UseVisualStyleBackColor = false;
-            this.btn_Add.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.OFFICE2003SILVER;
+            this.btn_Add.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
             // 
             // btn_Delete
             // 
             this.btn_Delete.AllowAnimations = true;
             this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
             this.btn_Delete.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_Delete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Delete.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Delete.HoverEffectsEnabled = true;
             this.btn_Delete.Location = new System.Drawing.Point(352, 20);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
@@ -193,14 +195,14 @@
             this.btn_Delete.Text = "DELETE";
             this.btn_Delete.UseThemeTextColor = false;
             this.btn_Delete.UseVisualStyleBackColor = false;
-            this.btn_Delete.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.OFFICE2003SILVER;
+            this.btn_Delete.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
             // 
             // btn_Edit
             // 
             this.btn_Edit.AllowAnimations = true;
             this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
             this.btn_Edit.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_Edit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Edit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Edit.HoverEffectsEnabled = true;
             this.btn_Edit.Location = new System.Drawing.Point(514, 20);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(4);
@@ -212,7 +214,7 @@
             this.btn_Edit.Text = "EDIT";
             this.btn_Edit.UseThemeTextColor = false;
             this.btn_Edit.UseVisualStyleBackColor = false;
-            this.btn_Edit.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.OFFICE2003SILVER;
+            this.btn_Edit.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
             // 
             // detailsPanel
             // 
@@ -350,7 +352,7 @@
             this.btn_Cancel.AllowAnimations = true;
             this.btn_Cancel.BackColor = System.Drawing.Color.Transparent;
             this.btn_Cancel.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Cancel.HoverEffectsEnabled = true;
             this.btn_Cancel.Location = new System.Drawing.Point(816, 20);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
@@ -362,7 +364,7 @@
             this.btn_Cancel.Text = "CANCEL";
             this.btn_Cancel.UseThemeTextColor = false;
             this.btn_Cancel.UseVisualStyleBackColor = false;
-            this.btn_Cancel.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.OFFICE2003SILVER;
+            this.btn_Cancel.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
             // 
             // dgv
             // 
@@ -399,6 +401,7 @@
             this.cb_Language.ValueMember = "";
             this.cb_Language.VIBlendScrollBarsTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
             this.cb_Language.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
+            this.cb_Language.SelectedItemChanged += new System.EventHandler(this.cb_Language_SelectedItemChanged);
             // 
             // backArrowControl1
             // 

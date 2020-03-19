@@ -27,6 +27,7 @@ namespace RoboDesk
         {
             InitializeComponent();
             presenter = new MenusPresenter(this);
+            presenter.EnsureLanguages(cb_Language);
         }
         
         public DataGridView Dgv => this.dgv.DataGridView;
@@ -49,6 +50,8 @@ namespace RoboDesk
 
         public Button Btn_Cancel => this.btn_Cancel;
 
+        private Dictionary<long, string> EditedLangToName = new Dictionary<long, string>();
+
         public void ExecuteBackClick()
         {
             FormNavigator.OpenForm<MainFrm>(this);
@@ -56,11 +59,20 @@ namespace RoboDesk
 
         public void BindModelToView(Menus selectedModel)
         {
+            EditedLangToName = new Dictionary<long, string>();
+
+            foreach (long lang in cb_Language.Items.Select(x => x.Value))
+            {
+                EditedLangToName[lang] = presenter.GetNameBySelectedLanguage(lang);
+            }
+
             tb_Code.Text = selectedModel.Code;
             tb_Description.Text = selectedModel.Description;
             tb_Discount.Text = selectedModel.Discount.ToString();
-            //tb_Name.Text = selectedModel.Name;
             tb_Price.Text = selectedModel.Price.ToString();
+
+            var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
+            tb_Name.Text = presenter.GetNameBySelectedLanguage(selectedLangId);
         }
 
         public void VerifyView()
@@ -76,9 +88,26 @@ namespace RoboDesk
             model.Code = tb_Code.Text;
                 model.Description = tb_Description.Text;
             model.Discount = Decimal.Parse(tb_Discount.Text);
-            //model.Name = tb_Name.Text;
             model.Price = Decimal.Parse(tb_Price.Text);
+
+            model.LangToName = model.LangToName ?? new Dictionary<long, string>();
+            foreach (var lang in EditedLangToName.Keys)
+                model.LangToName[lang] = EditedLangToName[lang];
+
             return model;
+        }
+
+        private void cb_Language_SelectedItemChanged(object sender, EventArgs e)
+        {
+            var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
+            EditedLangToName.TryGetValue(selectedLangId, out string name);
+            tb_Name.Text = name;
+        }
+
+        private void tb_Name_TextChanged(object sender, EventArgs e)
+        {
+            var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
+            EditedLangToName[selectedLangId] = tb_Name.Text;
         }
     }
 }

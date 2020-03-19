@@ -11,7 +11,7 @@ namespace GlobalClassesStandard.Models
     {
         public string Code { get; set; }
         [IgnoredProperty]
-        public Dictionary<int, string> LangToName { get; set; }
+        public Dictionary<long, string> LangToName { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
         public bool Enabled { get; set; }

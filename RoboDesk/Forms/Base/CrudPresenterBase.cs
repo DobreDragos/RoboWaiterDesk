@@ -124,7 +124,8 @@ namespace RoboDesk.Forms.Base
         protected virtual void Btn_Add_Click(object sender, EventArgs e)
         {
             FrmStatus = FormStatus.Add;
-            View.BindModelToView(new TableModel());
+            SelectedModel = new TableModel();
+            View.BindModelToView(SelectedModel);
         }
 
         protected virtual void RefreshDatagrid(int pageOffset, int maxRecords)
