@@ -91,6 +91,13 @@
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login\LoginPresenter.cs" />
+    <Compile Include="Forms\Tables\TablesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tables\TablesFrm.Designer.cs">
+      <DependentUpon>TablesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tables\TablesPresenter.cs" />
     <Compile Include="Forms\Menus\MenusFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +119,7 @@
     <Compile Include="Forms\Main\MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Tables\ITablesFrm.cs" />
     <Compile Include="Interfaces\ICustomButton.cs" />
     <Compile Include="Interfaces\Login\ILoginFrm.cs" />
     <Compile Include="Interfaces\Main\IMainFrm.cs" />
@@ -135,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tables\TablesFrm.resx">
+      <DependentUpon>TablesFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menus\MenusFrm.resx">
       <DependentUpon>MenusFrm.cs</DependentUpon>

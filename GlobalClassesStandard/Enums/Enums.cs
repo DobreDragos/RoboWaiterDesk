@@ -14,10 +14,12 @@ namespace DataLayerHelper.Enums
 
     public enum ObjectTypeId
     {
-        Products = 1,
-        Menus = 2,
-        Families = 3,
-        Alergens = 4
+        Products_Name = 1,
+        Menus_Name,
+        Families_Name,
+        Products_Description,
+        Menus_Description,
+        Products_Alergens
     }
 
     public enum LanguageId

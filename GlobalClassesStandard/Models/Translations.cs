@@ -6,8 +6,8 @@ using System.Text;
 
 namespace GlobalClassesStandard.Models
 {
-    [SqlTable("Names")]
-    public class Names : ModelBase
+    [SqlTable("Translations")]
+    public class Translations : ModelBase
     {
         public long ObjectTypeId { get; set; }
         public long LanguageId { get; set; }

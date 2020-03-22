@@ -3,7 +3,7 @@ using GlobalClassesStandard.Models;
 
 namespace DataLayerStandard.DataEntities
 {
-    public interface IProductAlergensDE : IDataEntity<ProductAlergens>
+    public interface ITranslationsDE : IDataEntity<Translations>
     {
     }
 }

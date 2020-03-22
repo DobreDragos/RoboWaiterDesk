@@ -51,6 +51,7 @@ namespace RoboDesk
         public Button Btn_Cancel => this.btn_Cancel;
 
         private Dictionary<long, string> EditedLangToName = new Dictionary<long, string>();
+        private Dictionary<long, string> EditedLangToDescription = new Dictionary<long, string>();
 
         public void ExecuteBackClick()
         {
@@ -60,19 +61,21 @@ namespace RoboDesk
         public void BindModelToView(Menus selectedModel)
         {
             EditedLangToName = new Dictionary<long, string>();
+            EditedLangToDescription = new Dictionary<long, string>();
 
             foreach (long lang in cb_Language.Items.Select(x => x.Value))
             {
-                EditedLangToName[lang] = presenter.GetNameBySelectedLanguage(lang);
+                EditedLangToName[lang] = presenter.GetNameBySelectedLanguage(lang, selectedModel.Id);
+                EditedLangToDescription[lang] = presenter.GetDescriptionBySelectedLanguage(lang, selectedModel.Id);
             }
 
             tb_Code.Text = selectedModel.Code;
-            tb_Description.Text = selectedModel.Description;
             tb_Discount.Text = selectedModel.Discount.ToString();
             tb_Price.Text = selectedModel.Price.ToString();
 
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
-            tb_Name.Text = presenter.GetNameBySelectedLanguage(selectedLangId);
+            tb_Name.Text = EditedLangToName[selectedLangId];
+            tb_Description.Text = EditedLangToDescription[selectedLangId];
         }
 
         public void VerifyView()
@@ -86,13 +89,17 @@ namespace RoboDesk
         public Menus BindViewToModel(Menus model)
         {
             model.Code = tb_Code.Text;
-                model.Description = tb_Description.Text;
             model.Discount = Decimal.Parse(tb_Discount.Text);
             model.Price = Decimal.Parse(tb_Price.Text);
 
             model.LangToName = model.LangToName ?? new Dictionary<long, string>();
             foreach (var lang in EditedLangToName.Keys)
                 model.LangToName[lang] = EditedLangToName[lang];
+
+            model.LangToDescription = model.LangToDescription ?? new Dictionary<long, string>();
+            foreach (var lang in EditedLangToDescription.Keys)
+                model.LangToDescription[lang] = EditedLangToDescription[lang];
+
 
             return model;
         }
@@ -102,12 +109,21 @@ namespace RoboDesk
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
             EditedLangToName.TryGetValue(selectedLangId, out string name);
             tb_Name.Text = name;
+
+            EditedLangToDescription.TryGetValue(selectedLangId, out string description);
+            tb_Description.Text = name;
         }
 
         private void tb_Name_TextChanged(object sender, EventArgs e)
         {
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
             EditedLangToName[selectedLangId] = tb_Name.Text;
+        }
+
+        private void tb_Description_TextChanged(object sender, EventArgs e)
+        {
+            var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
+            EditedLangToDescription[selectedLangId] = tb_Description.Text;
         }
     }
 }

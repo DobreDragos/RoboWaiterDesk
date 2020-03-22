@@ -12,9 +12,10 @@ namespace GlobalClassesStandard.Models
         public string Code { get; set; }
         [IgnoredProperty]
         public Dictionary<long, string> LangToName { get; set; }
-        public string Description { get; set; }
         public decimal Price { get; set; }
         public bool Enabled { get; set; }
         public decimal Discount { get; set; }
+        [IgnoredProperty]
+        public Dictionary<long, string> LangToDescription { get; set; }
     }
 }

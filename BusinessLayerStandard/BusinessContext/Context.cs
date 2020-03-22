@@ -31,19 +31,17 @@ namespace BusinessLayer
             DbAccess = new Dictionary<Type, IDgvDbAccess>
             {
                 { typeof(IPrinterBillsHistoryDE), new PrinterBillsHistoryDE(sqlCon) },
-                { typeof(IAlergensDE), new AlergensDE(sqlCon) },
                 { typeof(IFamiliesDE), new FamiliesDE(sqlCon) },
                 { typeof(IMenuProductsDE), new MenuProductsDE(sqlCon) },
                 { typeof(IOrderItemsDE), new OrderItemsDE(sqlCon) },
                 { typeof(IOrderItemsHistoryDE), new OrderItemsHistoryDE(sqlCon) },
                 { typeof(IOrdersDE), new OrdersDE(sqlCon) },
                 { typeof(IOrdersHistoryDE), new OrdersHistoryDE(sqlCon) },
-                { typeof(IProductAlergensDE), new ProductAlergensDE(sqlCon) },
                 { typeof(IProductsDE), new ProductsDE(sqlCon) },
                 { typeof(ITablesDE), new TablesDE(sqlCon) },
                 { typeof(IUsersDE), new UsersDE(sqlCon) },
                  { typeof(ILanguagesDE), new LanguagesDE(sqlCon) },
-                   { typeof(INamesDE), new NamesDE(sqlCon) },
+                   { typeof(ITranslationsDE), new TranslationsDE(sqlCon) },
                  { typeof(IMenusDE), new MenusDE(sqlCon) }
             };
         }

@@ -1,6 +1,6 @@
 ﻿namespace RoboDesk
 {
-    partial class MenusFrm
+    partial class TablesFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenusFrm));
-            this.lbl_Name = new MetroFramework.Controls.MetroLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TablesFrm));
             this.lbl_Code = new MetroFramework.Controls.MetroLabel();
-            this.tb_Name = new VIBlend.WinForms.Controls.vTextBox();
             this.tb_Search = new VIBlend.WinForms.Controls.vTextBox();
             this.detailsPanel = new MetroFramework.Controls.MetroPanel();
             this.tb_Code = new VIBlend.WinForms.Controls.vTextBox();
-            this.cb_Language = new VIBlend.WinForms.Controls.vComboBox();
-            this.tb_Discount = new VIBlend.WinForms.Controls.vTextBox();
-            this.tb_Price = new VIBlend.WinForms.Controls.vTextBox();
-            this.tb_Description = new VIBlend.WinForms.Controls.vTextBox();
-            this.lbl_Discount = new MetroFramework.Controls.MetroLabel();
-            this.lbl_Price = new MetroFramework.Controls.MetroLabel();
-            this.lbl_Description = new MetroFramework.Controls.MetroLabel();
             this.dgv = new In.Sontx.SimpleDataGridViewPaging.DataGridViewPaging();
             this.btn_Delete = new VIBlend.WinForms.Controls.vCircularButton();
             this.btn_Cancel = new VIBlend.WinForms.Controls.vCircularButton();
@@ -52,49 +43,16 @@
             this.detailsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbl_Name
-            // 
-            this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(15, 11);
-            this.lbl_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(47, 20);
-            this.lbl_Name.TabIndex = 6;
-            this.lbl_Name.Text = "Name";
-            this.lbl_Name.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // lbl_Code
             // 
             this.lbl_Code.AutoSize = true;
-            this.lbl_Code.Location = new System.Drawing.Point(13, 71);
+            this.lbl_Code.Location = new System.Drawing.Point(15, 24);
             this.lbl_Code.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Code.Name = "lbl_Code";
             this.lbl_Code.Size = new System.Drawing.Size(42, 20);
             this.lbl_Code.TabIndex = 7;
             this.lbl_Code.Text = "Code";
             this.lbl_Code.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // tb_Name
-            // 
-            this.tb_Name.BackColor = System.Drawing.Color.White;
-            this.tb_Name.BoundsOffset = new System.Drawing.Size(1, 1);
-            this.tb_Name.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.tb_Name.DefaultText = "";
-            this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Name.Location = new System.Drawing.Point(143, 9);
-            this.tb_Name.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_Name.MaxLength = 50;
-            this.tb_Name.MinimumSize = new System.Drawing.Size(133, 37);
-            this.tb_Name.Name = "tb_Name";
-            this.tb_Name.PasswordChar = '\0';
-            this.tb_Name.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_Name.SelectionLength = 0;
-            this.tb_Name.SelectionStart = 0;
-            this.tb_Name.Size = new System.Drawing.Size(225, 37);
-            this.tb_Name.TabIndex = 19;
-            this.tb_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tb_Name.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
-            this.tb_Name.TextChanged += new System.EventHandler(this.tb_Name_TextChanged);
             // 
             // tb_Search
             // 
@@ -126,16 +84,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.detailsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.detailsPanel.Controls.Add(this.tb_Code);
-            this.detailsPanel.Controls.Add(this.cb_Language);
-            this.detailsPanel.Controls.Add(this.tb_Discount);
-            this.detailsPanel.Controls.Add(this.tb_Price);
-            this.detailsPanel.Controls.Add(this.tb_Description);
-            this.detailsPanel.Controls.Add(this.lbl_Discount);
-            this.detailsPanel.Controls.Add(this.lbl_Price);
-            this.detailsPanel.Controls.Add(this.lbl_Description);
-            this.detailsPanel.Controls.Add(this.lbl_Name);
             this.detailsPanel.Controls.Add(this.lbl_Code);
-            this.detailsPanel.Controls.Add(this.tb_Name);
             this.detailsPanel.HorizontalScrollbarBarColor = true;
             this.detailsPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.detailsPanel.HorizontalScrollbarSize = 12;
@@ -156,7 +105,7 @@
             this.tb_Code.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Code.DefaultText = "";
             this.tb_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Code.Location = new System.Drawing.Point(143, 65);
+            this.tb_Code.Location = new System.Drawing.Point(145, 18);
             this.tb_Code.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Code.MaxLength = 50;
             this.tb_Code.MinimumSize = new System.Drawing.Size(133, 37);
@@ -169,131 +118,6 @@
             this.tb_Code.TabIndex = 31;
             this.tb_Code.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Code.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
-            // 
-            // cb_Language
-            // 
-            this.cb_Language.BackColor = System.Drawing.Color.White;
-            this.cb_Language.DisplayMember = "";
-            this.cb_Language.DropDownList = true;
-            this.cb_Language.DropDownMaximumSize = new System.Drawing.Size(1000, 1000);
-            this.cb_Language.DropDownMinimumSize = new System.Drawing.Size(10, 10);
-            this.cb_Language.DropDownResizeDirection = VIBlend.WinForms.Controls.SizingDirection.Both;
-            this.cb_Language.DropDownWidth = 84;
-            this.cb_Language.Location = new System.Drawing.Point(376, 10);
-            this.cb_Language.Margin = new System.Windows.Forms.Padding(4);
-            this.cb_Language.Name = "cb_Language";
-            this.cb_Language.RoundedCornersMaskListItem = ((byte)(15));
-            this.cb_Language.Size = new System.Drawing.Size(84, 36);
-            this.cb_Language.TabIndex = 30;
-            this.cb_Language.UseThemeBackColor = false;
-            this.cb_Language.UseThemeDropDownArrowColor = true;
-            this.cb_Language.ValueMember = "";
-            this.cb_Language.VIBlendScrollBarsTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
-            this.cb_Language.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
-            this.cb_Language.SelectedItemChanged += new System.EventHandler(this.cb_Language_SelectedItemChanged);
-            // 
-            // tb_Discount
-            // 
-            this.tb_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_Discount.BackColor = System.Drawing.Color.White;
-            this.tb_Discount.BoundsOffset = new System.Drawing.Size(1, 1);
-            this.tb_Discount.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.tb_Discount.DefaultText = "";
-            this.tb_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Discount.Location = new System.Drawing.Point(683, 123);
-            this.tb_Discount.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_Discount.MaxLength = 50;
-            this.tb_Discount.MinimumSize = new System.Drawing.Size(133, 37);
-            this.tb_Discount.Name = "tb_Discount";
-            this.tb_Discount.PasswordChar = '\0';
-            this.tb_Discount.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_Discount.SelectionLength = 0;
-            this.tb_Discount.SelectionStart = 0;
-            this.tb_Discount.Size = new System.Drawing.Size(281, 37);
-            this.tb_Discount.TabIndex = 25;
-            this.tb_Discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tb_Discount.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
-            // 
-            // tb_Price
-            // 
-            this.tb_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_Price.BackColor = System.Drawing.Color.White;
-            this.tb_Price.BoundsOffset = new System.Drawing.Size(1, 1);
-            this.tb_Price.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.tb_Price.DefaultText = "";
-            this.tb_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Price.Location = new System.Drawing.Point(683, 65);
-            this.tb_Price.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_Price.MaxLength = 50;
-            this.tb_Price.MinimumSize = new System.Drawing.Size(133, 37);
-            this.tb_Price.Name = "tb_Price";
-            this.tb_Price.PasswordChar = '\0';
-            this.tb_Price.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_Price.SelectionLength = 0;
-            this.tb_Price.SelectionStart = 0;
-            this.tb_Price.Size = new System.Drawing.Size(281, 37);
-            this.tb_Price.TabIndex = 26;
-            this.tb_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tb_Price.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
-            // 
-            // tb_Description
-            // 
-            this.tb_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_Description.BackColor = System.Drawing.Color.White;
-            this.tb_Description.BoundsOffset = new System.Drawing.Size(1, 1);
-            this.tb_Description.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.tb_Description.DefaultText = "";
-            this.tb_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Description.Location = new System.Drawing.Point(683, 9);
-            this.tb_Description.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_Description.MaxLength = 50;
-            this.tb_Description.MinimumSize = new System.Drawing.Size(133, 37);
-            this.tb_Description.Name = "tb_Description";
-            this.tb_Description.PasswordChar = '\0';
-            this.tb_Description.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_Description.SelectionLength = 0;
-            this.tb_Description.SelectionStart = 0;
-            this.tb_Description.Size = new System.Drawing.Size(281, 37);
-            this.tb_Description.TabIndex = 27;
-            this.tb_Description.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tb_Description.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
-            this.tb_Description.TextChanged += new System.EventHandler(this.tb_Description_TextChanged);
-            // 
-            // lbl_Discount
-            // 
-            this.lbl_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Discount.AutoSize = true;
-            this.lbl_Discount.Location = new System.Drawing.Point(535, 132);
-            this.lbl_Discount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Discount.Name = "lbl_Discount";
-            this.lbl_Discount.Size = new System.Drawing.Size(63, 20);
-            this.lbl_Discount.TabIndex = 24;
-            this.lbl_Discount.Text = "Discount";
-            this.lbl_Discount.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lbl_Price
-            // 
-            this.lbl_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Price.AutoSize = true;
-            this.lbl_Price.Location = new System.Drawing.Point(537, 65);
-            this.lbl_Price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Price.Name = "lbl_Price";
-            this.lbl_Price.Size = new System.Drawing.Size(40, 20);
-            this.lbl_Price.TabIndex = 23;
-            this.lbl_Price.Text = "Price";
-            this.lbl_Price.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // lbl_Description
-            // 
-            this.lbl_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Description.AutoSize = true;
-            this.lbl_Description.Location = new System.Drawing.Point(535, 11);
-            this.lbl_Description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Description.Name = "lbl_Description";
-            this.lbl_Description.Size = new System.Drawing.Size(79, 20);
-            this.lbl_Description.TabIndex = 22;
-            this.lbl_Description.Text = "Description";
-            this.lbl_Description.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // dgv
             // 
@@ -410,7 +234,7 @@
             this.backArrowControl1.Size = new System.Drawing.Size(85, 49);
             this.backArrowControl1.TabIndex = 2;
             // 
-            // MenusFrm
+            // TablesFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -426,9 +250,9 @@
             this.Controls.Add(this.backArrowControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MenusFrm";
+            this.Name = "TablesFrm";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
-            this.Text = "Menus";
+            this.Text = "Alergens";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();
@@ -438,19 +262,10 @@
 
         #endregion
         private CustomControls.BackArrowControl backArrowControl1;
-        private MetroFramework.Controls.MetroLabel lbl_Name;
         private MetroFramework.Controls.MetroLabel lbl_Code;
-        private VIBlend.WinForms.Controls.vTextBox tb_Name;
         private VIBlend.WinForms.Controls.vTextBox tb_Search;
         private MetroFramework.Controls.MetroPanel detailsPanel;
-        private VIBlend.WinForms.Controls.vTextBox tb_Discount;
-        private VIBlend.WinForms.Controls.vTextBox tb_Price;
-        private VIBlend.WinForms.Controls.vTextBox tb_Description;
-        private MetroFramework.Controls.MetroLabel lbl_Discount;
-        private MetroFramework.Controls.MetroLabel lbl_Price;
-        private MetroFramework.Controls.MetroLabel lbl_Description;
         private In.Sontx.SimpleDataGridViewPaging.DataGridViewPaging dgv;
-        private VIBlend.WinForms.Controls.vComboBox cb_Language;
         private VIBlend.WinForms.Controls.vTextBox tb_Code;
         private VIBlend.WinForms.Controls.vCircularButton btn_Delete;
         private VIBlend.WinForms.Controls.vCircularButton btn_Cancel;

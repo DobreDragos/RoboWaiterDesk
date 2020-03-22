@@ -173,12 +173,12 @@
     <value>Discount</value>
     <comment>DGColumnTranslation</comment>
   </data>
-  <data name="DGV_ENABLED" xml:space="preserve">
-    <value>Enabled</value>
-    <comment>DGColumnTranslation</comment>
-  </data>
   <data name="DGV_NAME" xml:space="preserve">
     <value>Name</value>
+    <comment>DGColumnTranslation</comment>
+  </data>
+  <data name="DGV_PRICE" xml:space="preserve">
+    <value>Price</value>
     <comment>DGColumnTranslation</comment>
   </data>
   <data name="ERR_LOGIN_FAILED" xml:space="preserve">

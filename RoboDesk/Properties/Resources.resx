@@ -234,8 +234,8 @@
     <value>Discount</value>
     <comment>DGColumnTranslation</comment>
   </data>
-  <data name="DGV_ENABLED" xml:space="preserve">
-    <value>Activ</value>
+  <data name="DGV_PRICE" xml:space="preserve">
+    <value>Pret</value>
     <comment>DGColumnTranslation</comment>
   </data>
   <data name="DGV_NAME" xml:space="preserve">

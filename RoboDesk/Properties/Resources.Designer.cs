@@ -19,7 +19,7 @@ namespace RoboDesk.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -207,20 +207,20 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activ.
-        /// </summary>
-        internal static string DGV_ENABLED {
-            get {
-                return ResourceManager.GetString("DGV_ENABLED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Nume.
         /// </summary>
         internal static string DGV_NAME {
             get {
                 return ResourceManager.GetString("DGV_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pret.
+        /// </summary>
+        internal static string DGV_PRICE {
+            get {
+                return ResourceManager.GetString("DGV_PRICE", resourceCulture);
             }
         }
         

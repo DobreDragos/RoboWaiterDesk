@@ -36,9 +36,6 @@
             this.cb_Family = new VIBlend.WinForms.Controls.vComboBox();
             this.btn_Save = new VIBlend.WinForms.Controls.vCircularButton();
             this.tb_Search = new VIBlend.WinForms.Controls.vTextBox();
-            this.btn_Add = new VIBlend.WinForms.Controls.vCircularButton();
-            this.btn_Delete = new VIBlend.WinForms.Controls.vCircularButton();
-            this.btn_Edit = new VIBlend.WinForms.Controls.vCircularButton();
             this.detailsPanel = new MetroFramework.Controls.MetroPanel();
             this.cb_Language = new VIBlend.WinForms.Controls.vComboBox();
             this.tb_Code = new VIBlend.WinForms.Controls.vTextBox();
@@ -48,9 +45,14 @@
             this.lbl_Discount = new MetroFramework.Controls.MetroLabel();
             this.lbl_Price = new MetroFramework.Controls.MetroLabel();
             this.lbl_Description = new MetroFramework.Controls.MetroLabel();
-            this.btn_Cancel = new VIBlend.WinForms.Controls.vCircularButton();
             this.dgv = new In.Sontx.SimpleDataGridViewPaging.DataGridViewPaging();
             this.backArrowControl1 = new RoboDesk.CustomControls.BackArrowControl();
+            this.btn_Edit = new VIBlend.WinForms.Controls.vCircularButton();
+            this.btn_Add = new VIBlend.WinForms.Controls.vCircularButton();
+            this.btn_Cancel = new VIBlend.WinForms.Controls.vCircularButton();
+            this.btn_Delete = new VIBlend.WinForms.Controls.vCircularButton();
+            this.tb_Alergens = new VIBlend.WinForms.Controls.vTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.detailsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +96,7 @@
             this.tb_Name.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Name.DefaultText = "";
             this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Name.Location = new System.Drawing.Point(143, 9);
+            this.tb_Name.Location = new System.Drawing.Point(83, 11);
             this.tb_Name.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Name.MaxLength = 50;
             this.tb_Name.MinimumSize = new System.Drawing.Size(133, 37);
@@ -117,7 +119,7 @@
             this.cb_Family.DropDownMinimumSize = new System.Drawing.Size(10, 10);
             this.cb_Family.DropDownResizeDirection = VIBlend.WinForms.Controls.SizingDirection.Both;
             this.cb_Family.DropDownWidth = 338;
-            this.cb_Family.Location = new System.Drawing.Point(143, 124);
+            this.cb_Family.Location = new System.Drawing.Point(83, 126);
             this.cb_Family.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Family.Name = "cb_Family";
             this.cb_Family.RoundedCornersMaskListItem = ((byte)(15));
@@ -136,7 +138,7 @@
             this.btn_Save.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.btn_Save.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Save.HoverEffectsEnabled = true;
-            this.btn_Save.Location = new System.Drawing.Point(195, 20);
+            this.btn_Save.Location = new System.Drawing.Point(176, 24);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.RoundedCornersMask = ((byte)(15));
@@ -145,7 +147,7 @@
             this.btn_Save.TabIndex = 23;
             this.btn_Save.Text = "SAVE";
             this.btn_Save.UseVisualStyleBackColor = false;
-            this.btn_Save.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
+            this.btn_Save.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.METROBLUE;
             // 
             // tb_Search
             // 
@@ -156,7 +158,7 @@
             this.tb_Search.ControlBorderColor = System.Drawing.Color.DimGray;
             this.tb_Search.DefaultText = "Search by name";
             this.tb_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Search.Location = new System.Drawing.Point(31, 325);
+            this.tb_Search.Location = new System.Drawing.Point(589, 179);
             this.tb_Search.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Search.MaxLength = 50;
             this.tb_Search.MinimumSize = new System.Drawing.Size(133, 37);
@@ -171,72 +173,18 @@
             this.tb_Search.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
             this.tb_Search.Visible = false;
             // 
-            // btn_Add
-            // 
-            this.btn_Add.AllowAnimations = true;
-            this.btn_Add.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Add.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_Add.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Add.HoverEffectsEnabled = true;
-            this.btn_Add.Location = new System.Drawing.Point(663, 20);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.RoundedCornersMask = ((byte)(15));
-            this.btn_Add.Size = new System.Drawing.Size(96, 89);
-            this.btn_Add.StyleKey = "CircularButton";
-            this.btn_Add.TabIndex = 24;
-            this.btn_Add.Text = "ADD";
-            this.btn_Add.UseThemeTextColor = false;
-            this.btn_Add.UseVisualStyleBackColor = false;
-            this.btn_Add.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.AllowAnimations = true;
-            this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Delete.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_Delete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Delete.HoverEffectsEnabled = true;
-            this.btn_Delete.Location = new System.Drawing.Point(352, 20);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.RoundedCornersMask = ((byte)(15));
-            this.btn_Delete.Size = new System.Drawing.Size(96, 89);
-            this.btn_Delete.StyleKey = "CircularButton";
-            this.btn_Delete.TabIndex = 24;
-            this.btn_Delete.Text = "DELETE";
-            this.btn_Delete.UseThemeTextColor = false;
-            this.btn_Delete.UseVisualStyleBackColor = false;
-            this.btn_Delete.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
-            // 
-            // btn_Edit
-            // 
-            this.btn_Edit.AllowAnimations = true;
-            this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Edit.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_Edit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Edit.HoverEffectsEnabled = true;
-            this.btn_Edit.Location = new System.Drawing.Point(514, 20);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.RoundedCornersMask = ((byte)(15));
-            this.btn_Edit.Size = new System.Drawing.Size(96, 89);
-            this.btn_Edit.StyleKey = "CircularButton";
-            this.btn_Edit.TabIndex = 25;
-            this.btn_Edit.Text = "EDIT";
-            this.btn_Edit.UseThemeTextColor = false;
-            this.btn_Edit.UseVisualStyleBackColor = false;
-            this.btn_Edit.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
-            // 
             // detailsPanel
             // 
             this.detailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.detailsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.detailsPanel.Controls.Add(this.tb_Alergens);
+            this.detailsPanel.Controls.Add(this.metroLabel1);
             this.detailsPanel.Controls.Add(this.cb_Language);
             this.detailsPanel.Controls.Add(this.tb_Code);
             this.detailsPanel.Controls.Add(this.tb_Discount);
             this.detailsPanel.Controls.Add(this.tb_Price);
+            this.detailsPanel.Controls.Add(this.tb_Search);
             this.detailsPanel.Controls.Add(this.tb_Description);
             this.detailsPanel.Controls.Add(this.lbl_Discount);
             this.detailsPanel.Controls.Add(this.lbl_Price);
@@ -252,7 +200,7 @@
             this.detailsPanel.Location = new System.Drawing.Point(31, 121);
             this.detailsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.detailsPanel.Name = "detailsPanel";
-            this.detailsPanel.Size = new System.Drawing.Size(1041, 176);
+            this.detailsPanel.Size = new System.Drawing.Size(1041, 224);
             this.detailsPanel.TabIndex = 26;
             this.detailsPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.detailsPanel.VerticalScrollbarBarColor = true;
@@ -268,7 +216,7 @@
             this.cb_Language.DropDownMinimumSize = new System.Drawing.Size(10, 10);
             this.cb_Language.DropDownResizeDirection = VIBlend.WinForms.Controls.SizingDirection.Both;
             this.cb_Language.DropDownWidth = 84;
-            this.cb_Language.Location = new System.Drawing.Point(397, 10);
+            this.cb_Language.Location = new System.Drawing.Point(337, 12);
             this.cb_Language.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Language.Name = "cb_Language";
             this.cb_Language.RoundedCornersMaskListItem = ((byte)(15));
@@ -288,7 +236,7 @@
             this.tb_Code.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Code.DefaultText = "";
             this.tb_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Code.Location = new System.Drawing.Point(143, 65);
+            this.tb_Code.Location = new System.Drawing.Point(83, 67);
             this.tb_Code.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Code.MaxLength = 50;
             this.tb_Code.MinimumSize = new System.Drawing.Size(133, 37);
@@ -367,6 +315,7 @@
             this.tb_Description.TabIndex = 27;
             this.tb_Description.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Description.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
+            this.tb_Description.TextChanged += new System.EventHandler(this.tb_Description_TextChanged);
             // 
             // lbl_Discount
             // 
@@ -404,25 +353,6 @@
             this.lbl_Description.Text = "Description";
             this.lbl_Description.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.AllowAnimations = true;
-            this.btn_Cancel.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Cancel.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Cancel.HoverEffectsEnabled = true;
-            this.btn_Cancel.Location = new System.Drawing.Point(816, 20);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.RoundedCornersMask = ((byte)(15));
-            this.btn_Cancel.Size = new System.Drawing.Size(96, 89);
-            this.btn_Cancel.StyleKey = "CircularButton";
-            this.btn_Cancel.TabIndex = 27;
-            this.btn_Cancel.Text = "CANCEL";
-            this.btn_Cancel.UseThemeTextColor = false;
-            this.btn_Cancel.UseVisualStyleBackColor = false;
-            this.btn_Cancel.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
-            // 
             // dgv
             // 
             this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -448,18 +378,122 @@
             this.backArrowControl1.Size = new System.Drawing.Size(85, 49);
             this.backArrowControl1.TabIndex = 2;
             // 
+            // btn_Edit
+            // 
+            this.btn_Edit.AllowAnimations = true;
+            this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Edit.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_Edit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Edit.HoverEffectsEnabled = true;
+            this.btn_Edit.Location = new System.Drawing.Point(502, 24);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.RoundedCornersMask = ((byte)(15));
+            this.btn_Edit.Size = new System.Drawing.Size(96, 89);
+            this.btn_Edit.StyleKey = "CircularButton";
+            this.btn_Edit.TabIndex = 29;
+            this.btn_Edit.Text = "EDIT";
+            this.btn_Edit.UseVisualStyleBackColor = false;
+            this.btn_Edit.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.METROBLUE;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.AllowAnimations = true;
+            this.btn_Add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Add.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_Add.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Add.HoverEffectsEnabled = true;
+            this.btn_Add.Location = new System.Drawing.Point(667, 24);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.RoundedCornersMask = ((byte)(15));
+            this.btn_Add.Size = new System.Drawing.Size(96, 89);
+            this.btn_Add.StyleKey = "CircularButton";
+            this.btn_Add.TabIndex = 30;
+            this.btn_Add.Text = "ADD";
+            this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.METROBLUE;
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.AllowAnimations = true;
+            this.btn_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Cancel.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Cancel.HoverEffectsEnabled = true;
+            this.btn_Cancel.Location = new System.Drawing.Point(825, 24);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.RoundedCornersMask = ((byte)(15));
+            this.btn_Cancel.Size = new System.Drawing.Size(96, 89);
+            this.btn_Cancel.StyleKey = "CircularButton";
+            this.btn_Cancel.TabIndex = 31;
+            this.btn_Cancel.Text = "CANCEL";
+            this.btn_Cancel.UseVisualStyleBackColor = false;
+            this.btn_Cancel.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.METROBLUE;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.AllowAnimations = true;
+            this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Delete.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_Delete.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Delete.HoverEffectsEnabled = true;
+            this.btn_Delete.Location = new System.Drawing.Point(337, 24);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.RoundedCornersMask = ((byte)(15));
+            this.btn_Delete.Size = new System.Drawing.Size(96, 89);
+            this.btn_Delete.StyleKey = "CircularButton";
+            this.btn_Delete.TabIndex = 32;
+            this.btn_Delete.Text = "DELETE";
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.METROBLUE;
+            // 
+            // tb_Alergens
+            // 
+            this.tb_Alergens.BackColor = System.Drawing.Color.White;
+            this.tb_Alergens.BoundsOffset = new System.Drawing.Size(1, 1);
+            this.tb_Alergens.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.tb_Alergens.DefaultText = "";
+            this.tb_Alergens.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_Alergens.Location = new System.Drawing.Point(83, 179);
+            this.tb_Alergens.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Alergens.MaxLength = 50;
+            this.tb_Alergens.MinimumSize = new System.Drawing.Size(133, 37);
+            this.tb_Alergens.Name = "tb_Alergens";
+            this.tb_Alergens.PasswordChar = '\0';
+            this.tb_Alergens.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_Alergens.SelectionLength = 0;
+            this.tb_Alergens.SelectionStart = 0;
+            this.tb_Alergens.Size = new System.Drawing.Size(338, 37);
+            this.tb_Alergens.TabIndex = 31;
+            this.tb_Alergens.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tb_Alergens.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
+            this.tb_Alergens.TextChanged += new System.EventHandler(this.tb_Alergens_TextChanged);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(13, 183);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(64, 20);
+            this.metroLabel1.TabIndex = 30;
+            this.metroLabel1.Text = "Alergens";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // ProductsFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 609);
-            this.Controls.Add(this.dgv);
-            this.Controls.Add(this.btn_Cancel);
-            this.Controls.Add(this.detailsPanel);
-            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.tb_Search);
+            this.Controls.Add(this.btn_Edit);
+            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.detailsPanel);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.backArrowControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -483,9 +517,6 @@
         private VIBlend.WinForms.Controls.vComboBox cb_Family;
         private VIBlend.WinForms.Controls.vCircularButton btn_Save;
         private VIBlend.WinForms.Controls.vTextBox tb_Search;
-        private VIBlend.WinForms.Controls.vCircularButton btn_Add;
-        private VIBlend.WinForms.Controls.vCircularButton btn_Delete;
-        private VIBlend.WinForms.Controls.vCircularButton btn_Edit;
         private MetroFramework.Controls.MetroPanel detailsPanel;
         private VIBlend.WinForms.Controls.vTextBox tb_Discount;
         private VIBlend.WinForms.Controls.vTextBox tb_Price;
@@ -493,9 +524,14 @@
         private MetroFramework.Controls.MetroLabel lbl_Discount;
         private MetroFramework.Controls.MetroLabel lbl_Price;
         private MetroFramework.Controls.MetroLabel lbl_Description;
-        private VIBlend.WinForms.Controls.vCircularButton btn_Cancel;
         private In.Sontx.SimpleDataGridViewPaging.DataGridViewPaging dgv;
         private VIBlend.WinForms.Controls.vTextBox tb_Code;
         private VIBlend.WinForms.Controls.vComboBox cb_Language;
+        private VIBlend.WinForms.Controls.vCircularButton btn_Edit;
+        private VIBlend.WinForms.Controls.vCircularButton btn_Add;
+        private VIBlend.WinForms.Controls.vCircularButton btn_Cancel;
+        private VIBlend.WinForms.Controls.vCircularButton btn_Delete;
+        private VIBlend.WinForms.Controls.vTextBox tb_Alergens;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

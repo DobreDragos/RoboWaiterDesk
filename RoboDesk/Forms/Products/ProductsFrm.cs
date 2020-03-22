@@ -54,8 +54,10 @@ namespace RoboDesk
 
         public Button Btn_Cancel => this.btn_Cancel;
 
-
+        private Dictionary<long, string> EditedLangToAlergens = new Dictionary<long, string>();
         private Dictionary<long, string> EditedLangToName = new Dictionary<long, string>();
+
+        private Dictionary<long, string> EditedLangToDescription = new Dictionary<long, string>();
 
         public void ExecuteBackClick()
         {
@@ -65,14 +67,16 @@ namespace RoboDesk
         public void BindModelToView(Products selectedModel)
         {
             EditedLangToName = new Dictionary<long, string>();
-            
+            EditedLangToDescription = new Dictionary<long, string>();
+
             foreach (long lang in cb_Language.Items.Select(x => x.Value))
             {
-                EditedLangToName[lang] = presenter.GetNameBySelectedLanguage(lang);
+                EditedLangToName[lang] = presenter.GetNameBySelectedLanguage(lang, selectedModel.Id);
+                EditedLangToDescription[lang] = presenter.GetDescriptionBySelectedLanguage(lang, selectedModel.Id);
+                EditedLangToAlergens[lang] = presenter.GetAlergensBySelectedLanguage(lang, selectedModel.Id);
             }
 
             tb_Code.Text = selectedModel.Code;
-            tb_Description.Text = selectedModel.Description;
             tb_Discount.Text = selectedModel.Discount.ToString();
             tb_Price.Text = selectedModel.Price.ToString();
             if (selectedModel.Id == 0) // if new then select first always
@@ -80,7 +84,10 @@ namespace RoboDesk
             else
                 cb_Family.SelectedValue = selectedModel.IdFamily; 
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
-            tb_Name.Text = presenter.GetNameBySelectedLanguage(selectedLangId);
+
+            tb_Name.Text = EditedLangToName[selectedLangId];
+            tb_Description.Text = EditedLangToDescription[selectedLangId];
+            tb_Alergens.Text = EditedLangToAlergens[selectedLangId];
         }
 
         public void VerifyView()
@@ -96,7 +103,6 @@ namespace RoboDesk
         public Products BindViewToModel(Products _selectedModel)
         {
             _selectedModel.Code = tb_Code.Text;
-            _selectedModel.Description = tb_Description.Text;
             _selectedModel.Discount = Decimal.Parse(tb_Discount.Text);
             _selectedModel.Price = Decimal.Parse(tb_Price.Text);
             _selectedModel.IdFamily = (long)cb_Family.SelectedValue;
@@ -104,6 +110,14 @@ namespace RoboDesk
             _selectedModel.LangToName = _selectedModel.LangToName ?? new Dictionary<long, string>();
             foreach (var lang in EditedLangToName.Keys)
                 _selectedModel.LangToName[lang] = EditedLangToName[lang];
+
+            _selectedModel.LangToDescription = _selectedModel.LangToDescription ?? new Dictionary<long, string>();
+            foreach (var lang in EditedLangToDescription.Keys)
+                _selectedModel.LangToDescription[lang] = EditedLangToDescription[lang];
+
+            _selectedModel.LangToAlergens = _selectedModel.LangToAlergens ?? new Dictionary<long, string>();
+            foreach (var lang in EditedLangToAlergens.Keys)
+                _selectedModel.LangToAlergens[lang] = EditedLangToAlergens[lang];
 
             return _selectedModel;
         }
@@ -113,12 +127,30 @@ namespace RoboDesk
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
             EditedLangToName.TryGetValue(selectedLangId, out string name);
             tb_Name.Text = name;
+
+            EditedLangToDescription.TryGetValue(selectedLangId, out string description);
+            tb_Description.Text = description;
+
+            EditedLangToAlergens.TryGetValue(selectedLangId, out string alergens);
+            tb_Alergens.Text = alergens;
         }
 
         private void tb_Name_TextChanged(object sender, EventArgs e)
         {
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
             EditedLangToName[selectedLangId] = tb_Name.Text;
+        }
+
+        private void tb_Alergens_TextChanged(object sender, EventArgs e)
+        {
+            var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
+            EditedLangToAlergens[selectedLangId] = tb_Alergens.Text;
+        }
+
+        private void tb_Description_TextChanged(object sender, EventArgs e)
+        {
+            var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
+            EditedLangToDescription[selectedLangId] = tb_Description.Text;
         }
     }
 }

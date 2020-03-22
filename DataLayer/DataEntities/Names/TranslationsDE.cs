@@ -7,9 +7,9 @@ using SqlLite;
 
 namespace DataLayerStandard.DataEntities
 {
-    public class NamesDE : DataBase<Names>, INamesDE
+    public class TranslationsDE : DataBase<Translations>, ITranslationsDE
     {
-        public NamesDE(SqlConnectorManager sqlConManager) : base(sqlConManager)
+        public TranslationsDE(SqlConnectorManager sqlConManager) : base(sqlConManager)
         {
         }
     }

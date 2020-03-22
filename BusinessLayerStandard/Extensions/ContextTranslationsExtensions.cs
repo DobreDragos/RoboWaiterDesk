@@ -10,12 +10,12 @@ using System.Text;
 
 namespace BusinessLayerStandard.Extensions
 {
-    public static class ContextNamesExtensions
+    public static class ContextTranslationsExtensions
     {
         public static Dictionary<long, Dictionary<long, string>> GetTranslations(this IContext Context, ObjectTypeId type)
         {
             var modelIdToNamesByLanguageDictionary = new Dictionary<long, Dictionary<long, string>>();
-            var names = Context.Get<INamesDE>().GetAllFromDb(new SqlFilter("ObjectTypeId", (int)type, SqlOperators.equals));
+            var names = Context.Get<ITranslationsDE>().GetAllFromDb(new SqlFilter("ObjectTypeId", (int)type, SqlOperators.equals));
             var langs = Context.Get<ILanguagesDE>().GetAll();
 
             foreach (var groupedByProductId in names.GroupBy(x => x.ObjectId))
@@ -31,26 +31,26 @@ namespace BusinessLayerStandard.Extensions
             return modelIdToNamesByLanguageDictionary;
         }
 
-        public static void UpdateNames(this IContext context, long modelId, ObjectTypeId objectType,Dictionary<long,string> langToName)
+        public static void UpdateTranslations(this IContext context, long modelId, ObjectTypeId objectType,Dictionary<long,string> langToName)
         {
-            var names = context.Get<INamesDE>().GetAllFromDb(new SqlFilter("ObjectTypeId", (int)objectType));
+            var names = context.Get<ITranslationsDE>().GetAllFromDb(new SqlFilter("ObjectTypeId", (int)objectType));
             foreach (var langId in langToName.Keys)
             {
                 var name = names.FirstOrDefault(x => x.LanguageId == langId && x.ObjectId == modelId)
-                    ?? new Names { LanguageId = langId, ObjectId = modelId, ObjectTypeId = (int)objectType };
+                    ?? new Translations { LanguageId = langId, ObjectId = modelId, ObjectTypeId = (int)objectType };
                 name.Name = langToName[langId];
 
                 if (name.Id > 0)
-                    context.Get<INamesDE>().Update(name);
+                    context.Get<ITranslationsDE>().Update(name);
                 else
-                    context.Get<INamesDE>().Insert(name);
+                    context.Get<ITranslationsDE>().Insert(name);
 
             }
         }
 
-        public static void DeleteNames(this IContext context, long modelId, ObjectTypeId objectType)
+        public static void DeleteTranslations(this IContext context, long modelId, ObjectTypeId objectType)
         {
-            context.Get<INamesDE>().DeleteAllFromDb(
+            context.Get<ITranslationsDE>().DeleteAllFromDb(
                 new SqlFilter("ObjectTypeId", (int)objectType, SqlOperators.equals, SqlLogicOperators.and),
                 new SqlFilter("ObjectId", modelId));
         }
