@@ -250,4 +250,32 @@
     <value>Anuleaza</value>
     <comment>FormTranslation</comment>
   </data>
+  <data name="BTN_ADD_PROD" xml:space="preserve">
+    <value>&lt;&lt;</value>
+    <comment>Translate</comment>
+  </data>
+  <data name="BTN_REMOVE_PROD" xml:space="preserve">
+    <value>&gt;&gt;</value>
+    <comment>Translate</comment>
+  </data>
+  <data name="DGV_ALERGENS" xml:space="preserve">
+    <value>Alergeni</value>
+    <comment>DGColumnTranslation</comment>
+  </data>
+  <data name="DGV_TOKEN" xml:space="preserve">
+    <value>Token Masa</value>
+    <comment>DGColumnTranslation</comment>
+  </data>
+  <data name="LBL_ALERGENS" xml:space="preserve">
+    <value>Alergeni</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="LBL_EXISTING_PRODUCTS" xml:space="preserve">
+    <value>Produse Existente</value>
+    <comment>Translate</comment>
+  </data>
+  <data name="LBL_MENU_PRODUCTS" xml:space="preserve">
+    <value>Produse Meniu</value>
+    <comment>Translate</comment>
+  </data>
 </root>

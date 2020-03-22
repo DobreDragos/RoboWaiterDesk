@@ -37,15 +37,14 @@ namespace RoboDesk
             FormNavigator.OpenForm<RoboDesk.ProductsFrm>(this);
         }
 
-        private void btn_Alergens_Click(object sender, EventArgs e)
-        {
-            FormNavigator.OpenForm<RoboDesk.TablesFrm>(this);
-        }
-
         private void btn_Menus_Click(object sender, EventArgs e)
         {
             FormNavigator.OpenForm<RoboDesk.MenusFrm>(this);
         }
 
+        private void btn_Tables_Click(object sender, EventArgs e)
+        {
+            FormNavigator.OpenForm<RoboDesk.TablesFrm>(this);
+        }
     }
 }

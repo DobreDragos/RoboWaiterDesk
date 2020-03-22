@@ -32,7 +32,6 @@
             this.btn_Tables = new VIBlend.WinForms.Controls.vButton();
             this.btn_Products = new VIBlend.WinForms.Controls.vButton();
             this.btn_Menus = new VIBlend.WinForms.Controls.vButton();
-            this.btn_Alergens = new VIBlend.WinForms.Controls.vButton();
             this.btn_Settings = new VIBlend.WinForms.Controls.vButton();
             this.backArrowControl1 = new RoboDesk.CustomControls.BackArrowControl();
             this.SuspendLayout();
@@ -51,6 +50,7 @@
             this.btn_Tables.Text = "btn_Tables";
             this.btn_Tables.UseVisualStyleBackColor = false;
             this.btn_Tables.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
+            this.btn_Tables.Click += new System.EventHandler(this.btn_Tables_Click);
             // 
             // btn_Products
             // 
@@ -83,22 +83,6 @@
             this.btn_Menus.UseVisualStyleBackColor = false;
             this.btn_Menus.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
             this.btn_Menus.Click += new System.EventHandler(this.btn_Menus_Click);
-            // 
-            // btn_Alergens
-            // 
-            this.btn_Alergens.AllowAnimations = true;
-            this.btn_Alergens.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Alergens.Location = new System.Drawing.Point(465, 351);
-            this.btn_Alergens.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Alergens.Name = "btn_Alergens";
-            this.btn_Alergens.RoundedCornersMask = ((byte)(15));
-            this.btn_Alergens.RoundedCornersRadius = 10;
-            this.btn_Alergens.Size = new System.Drawing.Size(176, 142);
-            this.btn_Alergens.TabIndex = 17;
-            this.btn_Alergens.Text = "btn_Alergens";
-            this.btn_Alergens.UseVisualStyleBackColor = false;
-            this.btn_Alergens.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
-            this.btn_Alergens.Click += new System.EventHandler(this.btn_Alergens_Click);
             // 
             // btn_Settings
             // 
@@ -135,7 +119,6 @@
             this.Controls.Add(this.btn_Tables);
             this.Controls.Add(this.btn_Products);
             this.Controls.Add(this.btn_Menus);
-            this.Controls.Add(this.btn_Alergens);
             this.Controls.Add(this.btn_Settings);
             this.Controls.Add(this.backArrowControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -153,7 +136,6 @@
         private VIBlend.WinForms.Controls.vButton btn_Tables;
         private VIBlend.WinForms.Controls.vButton btn_Products;
         private VIBlend.WinForms.Controls.vButton btn_Menus;
-        private VIBlend.WinForms.Controls.vButton btn_Alergens;
         private VIBlend.WinForms.Controls.vButton btn_Settings;
     }
 }

@@ -17,5 +17,7 @@ namespace GlobalClassesStandard.Models
         public decimal Discount { get; set; }
         [IgnoredProperty]
         public Dictionary<long, string> LangToDescription { get; set; }
+        [IgnoredProperty]
+        public List<Products> Products { get; set; }
     }
 }

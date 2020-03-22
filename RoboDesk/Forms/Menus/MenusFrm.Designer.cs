@@ -34,6 +34,12 @@
             this.tb_Name = new VIBlend.WinForms.Controls.vTextBox();
             this.tb_Search = new VIBlend.WinForms.Controls.vTextBox();
             this.detailsPanel = new MetroFramework.Controls.MetroPanel();
+            this.lbl_Existing_Products = new MetroFramework.Controls.MetroLabel();
+            this.lbl_Menu_Products = new MetroFramework.Controls.MetroLabel();
+            this.btn_add_prod = new System.Windows.Forms.Button();
+            this.btn_remove_prod = new System.Windows.Forms.Button();
+            this.lb_Existing_Products = new System.Windows.Forms.ListBox();
+            this.lb_Menu_Products = new System.Windows.Forms.ListBox();
             this.tb_Code = new VIBlend.WinForms.Controls.vTextBox();
             this.cb_Language = new VIBlend.WinForms.Controls.vComboBox();
             this.tb_Discount = new VIBlend.WinForms.Controls.vTextBox();
@@ -81,7 +87,7 @@
             this.tb_Name.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Name.DefaultText = "";
             this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Name.Location = new System.Drawing.Point(143, 9);
+            this.tb_Name.Location = new System.Drawing.Point(121, 9);
             this.tb_Name.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Name.MaxLength = 50;
             this.tb_Name.MinimumSize = new System.Drawing.Size(133, 37);
@@ -90,7 +96,7 @@
             this.tb_Name.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_Name.SelectionLength = 0;
             this.tb_Name.SelectionStart = 0;
-            this.tb_Name.Size = new System.Drawing.Size(225, 37);
+            this.tb_Name.Size = new System.Drawing.Size(281, 37);
             this.tb_Name.TabIndex = 19;
             this.tb_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Name.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
@@ -125,6 +131,12 @@
             this.detailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.detailsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.detailsPanel.Controls.Add(this.lbl_Existing_Products);
+            this.detailsPanel.Controls.Add(this.lbl_Menu_Products);
+            this.detailsPanel.Controls.Add(this.btn_add_prod);
+            this.detailsPanel.Controls.Add(this.btn_remove_prod);
+            this.detailsPanel.Controls.Add(this.lb_Existing_Products);
+            this.detailsPanel.Controls.Add(this.lb_Menu_Products);
             this.detailsPanel.Controls.Add(this.tb_Code);
             this.detailsPanel.Controls.Add(this.cb_Language);
             this.detailsPanel.Controls.Add(this.tb_Discount);
@@ -142,12 +154,76 @@
             this.detailsPanel.Location = new System.Drawing.Point(31, 121);
             this.detailsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.detailsPanel.Name = "detailsPanel";
-            this.detailsPanel.Size = new System.Drawing.Size(1041, 176);
+            this.detailsPanel.Size = new System.Drawing.Size(1041, 233);
             this.detailsPanel.TabIndex = 26;
             this.detailsPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.detailsPanel.VerticalScrollbarBarColor = true;
             this.detailsPanel.VerticalScrollbarHighlightOnWheel = false;
             this.detailsPanel.VerticalScrollbarSize = 13;
+            // 
+            // lbl_Existing_Products
+            // 
+            this.lbl_Existing_Products.AutoSize = true;
+            this.lbl_Existing_Products.Location = new System.Drawing.Point(784, 11);
+            this.lbl_Existing_Products.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Existing_Products.Name = "lbl_Existing_Products";
+            this.lbl_Existing_Products.Size = new System.Drawing.Size(113, 20);
+            this.lbl_Existing_Products.TabIndex = 37;
+            this.lbl_Existing_Products.Text = "Existing Products";
+            this.lbl_Existing_Products.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lbl_Menu_Products
+            // 
+            this.lbl_Menu_Products.AutoSize = true;
+            this.lbl_Menu_Products.Location = new System.Drawing.Point(556, 11);
+            this.lbl_Menu_Products.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Menu_Products.Name = "lbl_Menu_Products";
+            this.lbl_Menu_Products.Size = new System.Drawing.Size(103, 20);
+            this.lbl_Menu_Products.TabIndex = 36;
+            this.lbl_Menu_Products.Text = "Menu Products";
+            this.lbl_Menu_Products.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // btn_add_prod
+            // 
+            this.btn_add_prod.Location = new System.Drawing.Point(732, 137);
+            this.btn_add_prod.Name = "btn_add_prod";
+            this.btn_add_prod.Size = new System.Drawing.Size(36, 23);
+            this.btn_add_prod.TabIndex = 35;
+            this.btn_add_prod.Text = "<<";
+            this.btn_add_prod.UseVisualStyleBackColor = true;
+            this.btn_add_prod.Click += new System.EventHandler(this.btn_add_prod_Click);
+            // 
+            // btn_remove_prod
+            // 
+            this.btn_remove_prod.Location = new System.Drawing.Point(732, 100);
+            this.btn_remove_prod.Name = "btn_remove_prod";
+            this.btn_remove_prod.Size = new System.Drawing.Size(36, 23);
+            this.btn_remove_prod.TabIndex = 34;
+            this.btn_remove_prod.Text = ">>";
+            this.btn_remove_prod.UseVisualStyleBackColor = true;
+            this.btn_remove_prod.Click += new System.EventHandler(this.btn_remove_prod_Click);
+            // 
+            // lb_Existing_Products
+            // 
+            this.lb_Existing_Products.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lb_Existing_Products.FormattingEnabled = true;
+            this.lb_Existing_Products.ItemHeight = 16;
+            this.lb_Existing_Products.Location = new System.Drawing.Point(784, 44);
+            this.lb_Existing_Products.Name = "lb_Existing_Products";
+            this.lb_Existing_Products.Size = new System.Drawing.Size(161, 164);
+            this.lb_Existing_Products.TabIndex = 33;
+            // 
+            // lb_Menu_Products
+            // 
+            this.lb_Menu_Products.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lb_Menu_Products.FormattingEnabled = true;
+            this.lb_Menu_Products.ItemHeight = 16;
+            this.lb_Menu_Products.Location = new System.Drawing.Point(556, 44);
+            this.lb_Menu_Products.Name = "lb_Menu_Products";
+            this.lb_Menu_Products.Size = new System.Drawing.Size(157, 164);
+            this.lb_Menu_Products.TabIndex = 32;
             // 
             // tb_Code
             // 
@@ -156,7 +232,7 @@
             this.tb_Code.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Code.DefaultText = "";
             this.tb_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Code.Location = new System.Drawing.Point(143, 65);
+            this.tb_Code.Location = new System.Drawing.Point(121, 65);
             this.tb_Code.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Code.MaxLength = 50;
             this.tb_Code.MinimumSize = new System.Drawing.Size(133, 37);
@@ -165,7 +241,7 @@
             this.tb_Code.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_Code.SelectionLength = 0;
             this.tb_Code.SelectionStart = 0;
-            this.tb_Code.Size = new System.Drawing.Size(317, 37);
+            this.tb_Code.Size = new System.Drawing.Size(388, 37);
             this.tb_Code.TabIndex = 31;
             this.tb_Code.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Code.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
@@ -179,7 +255,7 @@
             this.cb_Language.DropDownMinimumSize = new System.Drawing.Size(10, 10);
             this.cb_Language.DropDownResizeDirection = VIBlend.WinForms.Controls.SizingDirection.Both;
             this.cb_Language.DropDownWidth = 84;
-            this.cb_Language.Location = new System.Drawing.Point(376, 10);
+            this.cb_Language.Location = new System.Drawing.Point(425, 11);
             this.cb_Language.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Language.Name = "cb_Language";
             this.cb_Language.RoundedCornersMaskListItem = ((byte)(15));
@@ -194,13 +270,12 @@
             // 
             // tb_Discount
             // 
-            this.tb_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Discount.BackColor = System.Drawing.Color.White;
             this.tb_Discount.BoundsOffset = new System.Drawing.Size(1, 1);
             this.tb_Discount.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Discount.DefaultText = "";
             this.tb_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Discount.Location = new System.Drawing.Point(683, 123);
+            this.tb_Discount.Location = new System.Drawing.Point(376, 180);
             this.tb_Discount.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Discount.MaxLength = 50;
             this.tb_Discount.MinimumSize = new System.Drawing.Size(133, 37);
@@ -209,20 +284,19 @@
             this.tb_Discount.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_Discount.SelectionLength = 0;
             this.tb_Discount.SelectionStart = 0;
-            this.tb_Discount.Size = new System.Drawing.Size(281, 37);
+            this.tb_Discount.Size = new System.Drawing.Size(133, 37);
             this.tb_Discount.TabIndex = 25;
             this.tb_Discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Discount.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
             // 
             // tb_Price
             // 
-            this.tb_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Price.BackColor = System.Drawing.Color.White;
             this.tb_Price.BoundsOffset = new System.Drawing.Size(1, 1);
             this.tb_Price.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Price.DefaultText = "";
             this.tb_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Price.Location = new System.Drawing.Point(683, 65);
+            this.tb_Price.Location = new System.Drawing.Point(121, 180);
             this.tb_Price.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Price.MaxLength = 50;
             this.tb_Price.MinimumSize = new System.Drawing.Size(133, 37);
@@ -231,20 +305,19 @@
             this.tb_Price.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_Price.SelectionLength = 0;
             this.tb_Price.SelectionStart = 0;
-            this.tb_Price.Size = new System.Drawing.Size(281, 37);
+            this.tb_Price.Size = new System.Drawing.Size(133, 37);
             this.tb_Price.TabIndex = 26;
             this.tb_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Price.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
             // 
             // tb_Description
             // 
-            this.tb_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Description.BackColor = System.Drawing.Color.White;
             this.tb_Description.BoundsOffset = new System.Drawing.Size(1, 1);
             this.tb_Description.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Description.DefaultText = "";
             this.tb_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Description.Location = new System.Drawing.Point(683, 9);
+            this.tb_Description.Location = new System.Drawing.Point(123, 123);
             this.tb_Description.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Description.MaxLength = 50;
             this.tb_Description.MinimumSize = new System.Drawing.Size(133, 37);
@@ -253,7 +326,7 @@
             this.tb_Description.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_Description.SelectionLength = 0;
             this.tb_Description.SelectionStart = 0;
-            this.tb_Description.Size = new System.Drawing.Size(281, 37);
+            this.tb_Description.Size = new System.Drawing.Size(386, 37);
             this.tb_Description.TabIndex = 27;
             this.tb_Description.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Description.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
@@ -261,9 +334,8 @@
             // 
             // lbl_Discount
             // 
-            this.lbl_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Discount.AutoSize = true;
-            this.lbl_Discount.Location = new System.Drawing.Point(535, 132);
+            this.lbl_Discount.Location = new System.Drawing.Point(283, 188);
             this.lbl_Discount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Discount.Name = "lbl_Discount";
             this.lbl_Discount.Size = new System.Drawing.Size(63, 20);
@@ -273,9 +345,8 @@
             // 
             // lbl_Price
             // 
-            this.lbl_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Price.AutoSize = true;
-            this.lbl_Price.Location = new System.Drawing.Point(537, 65);
+            this.lbl_Price.Location = new System.Drawing.Point(12, 188);
             this.lbl_Price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Price.Name = "lbl_Price";
             this.lbl_Price.Size = new System.Drawing.Size(40, 20);
@@ -285,9 +356,8 @@
             // 
             // lbl_Description
             // 
-            this.lbl_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Description.AutoSize = true;
-            this.lbl_Description.Location = new System.Drawing.Point(535, 11);
+            this.lbl_Description.Location = new System.Drawing.Point(14, 125);
             this.lbl_Description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(79, 20);
@@ -457,5 +527,11 @@
         private VIBlend.WinForms.Controls.vCircularButton btn_Add;
         private VIBlend.WinForms.Controls.vCircularButton btn_Edit;
         private VIBlend.WinForms.Controls.vCircularButton btn_Save;
+        private MetroFramework.Controls.MetroLabel lbl_Existing_Products;
+        private MetroFramework.Controls.MetroLabel lbl_Menu_Products;
+        private System.Windows.Forms.Button btn_add_prod;
+        private System.Windows.Forms.Button btn_remove_prod;
+        private System.Windows.Forms.ListBox lb_Existing_Products;
+        private System.Windows.Forms.ListBox lb_Menu_Products;
     }
 }

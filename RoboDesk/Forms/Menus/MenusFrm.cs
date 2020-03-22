@@ -28,6 +28,7 @@ namespace RoboDesk
             InitializeComponent();
             presenter = new MenusPresenter(this);
             presenter.EnsureLanguages(cb_Language);
+            presenter.EnsureExistingProducts(lb_Existing_Products);
         }
         
         public DataGridView Dgv => this.dgv.DataGridView;
@@ -76,6 +77,10 @@ namespace RoboDesk
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
             tb_Name.Text = EditedLangToName[selectedLangId];
             tb_Description.Text = EditedLangToDescription[selectedLangId];
+
+            selectedModel.Products = selectedModel.Products ?? new List<Products>();
+
+            presenter.SetProductsListbox(lb_Menu_Products, selectedModel.Products);
         }
 
         public void VerifyView()
@@ -100,7 +105,9 @@ namespace RoboDesk
             foreach (var lang in EditedLangToDescription.Keys)
                 model.LangToDescription[lang] = EditedLangToDescription[lang];
 
-
+            model.Products.Clear();
+            var prods = lb_Menu_Products.DataSource as List<Products>;
+            model.Products.AddRange(prods);
             return model;
         }
 
@@ -124,6 +131,27 @@ namespace RoboDesk
         {
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
             EditedLangToDescription[selectedLangId] = tb_Description.Text;
+        }
+
+        private void btn_remove_prod_Click(object sender, EventArgs e)
+        {
+            if (lb_Menu_Products.SelectedItem == null)
+                return;
+
+            var list = lb_Menu_Products.DataSource as List<Products>;
+            list.RemoveAt(lb_Menu_Products.SelectedIndex);
+            presenter.SetProductsListbox(lb_Menu_Products, list);
+        }
+
+        private void btn_add_prod_Click(object sender, EventArgs e)
+        {
+            var selected = lb_Existing_Products.SelectedItem as Products;
+            if (selected == null)
+                return;
+
+            var list = lb_Menu_Products.DataSource as List<Products>;
+            list.Add(selected);
+            presenter.SetProductsListbox(lb_Menu_Products, list);
         }
     }
 }

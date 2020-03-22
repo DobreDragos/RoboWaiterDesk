@@ -90,6 +90,15 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;&lt;.
+        /// </summary>
+        internal static string BTN_ADD_PROD {
+            get {
+                return ResourceManager.GetString("BTN_ADD_PROD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Alergeni.
         /// </summary>
         internal static string BTN_ALERGENS {
@@ -153,6 +162,15 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &gt;&gt;.
+        /// </summary>
+        internal static string BTN_REMOVE_PROD {
+            get {
+                return ResourceManager.GetString("BTN_REMOVE_PROD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SALVEAZA.
         /// </summary>
         internal static string BTN_SAVE {
@@ -185,6 +203,15 @@ namespace RoboDesk.Properties {
         internal static string CB_DEFAULT_SELECT {
             get {
                 return ResourceManager.GetString("CB_DEFAULT_SELECT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alergeni.
+        /// </summary>
+        internal static string DGV_ALERGENS {
+            get {
+                return ResourceManager.GetString("DGV_ALERGENS", resourceCulture);
             }
         }
         
@@ -225,6 +252,15 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Token Masa.
+        /// </summary>
+        internal static string DGV_TOKEN {
+            get {
+                return ResourceManager.GetString("DGV_TOKEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap en {
@@ -249,6 +285,15 @@ namespace RoboDesk.Properties {
         internal static string ERR_UNKNOWN {
             get {
                 return ResourceManager.GetString("ERR_UNKNOWN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alergeni.
+        /// </summary>
+        internal static string LBL_ALERGENS {
+            get {
+                return ResourceManager.GetString("LBL_ALERGENS", resourceCulture);
             }
         }
         
@@ -280,11 +325,29 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Produse Existente.
+        /// </summary>
+        internal static string LBL_EXISTING_PRODUCTS {
+            get {
+                return ResourceManager.GetString("LBL_EXISTING_PRODUCTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Familie.
         /// </summary>
         internal static string LBL_FAMILY {
             get {
                 return ResourceManager.GetString("LBL_FAMILY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Produse Meniu.
+        /// </summary>
+        internal static string LBL_MENU_PRODUCTS {
+            get {
+                return ResourceManager.GetString("LBL_MENU_PRODUCTS", resourceCulture);
             }
         }
         

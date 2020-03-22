@@ -88,7 +88,7 @@ namespace RoboDesk.Forms.Base
         {
             SafeExecuteAction(() => { 
                 if (SelectedModel != null &&
-                    MyMessageBox.ShowDialog(View, Properties.Resources.WAR_DELETE, Globals.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) 
+                    MessageBox.Show(View, Properties.Resources.WAR_DELETE, Globals.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) 
                     == DialogResult.Yes)
                 {
                     ExecuteDeleteDb(SelectedModel);
