@@ -11,5 +11,6 @@ namespace GlobalClassesStandard.Models
     {
         public long IdProduct { get; set; }
         public long IdMenu { get; set; }
+        public int Quantity { get; set; }
     }
 }

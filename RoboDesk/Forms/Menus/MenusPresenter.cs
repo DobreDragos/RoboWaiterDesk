@@ -81,8 +81,8 @@ namespace RoboDesk
         {
             var menuProductsDE = Context.Get<IMenuProductsDE>();
             menuProductsDE.DeleteAll("IdMenu", model.Id);
-            foreach (var prod in model.Products)
-                menuProductsDE.Insert(new MenuProducts() { IdMenu = model.Id, IdProduct = prod.Id });
+            foreach (var prodGrouped in model.Products.GroupBy(x => x.Id))
+                menuProductsDE.Insert(new MenuProducts() { IdMenu = model.Id, IdProduct = prodGrouped.Key, Quantity = prodGrouped.Count() });
 
             Context.UpdateTranslations(model.Id, ObjectTypeName, model.LangToName);
             Context.UpdateTranslations(model.Id, ObjectTypeDescription, model.LangToDescription);
@@ -132,7 +132,11 @@ namespace RoboDesk
                 {
                     var product = prodDE.GetById(menuToProd.IdProduct);
                     if (product != null)
-                        menu.Products.Add(product);
+                    {
+                        for (int i=0;i<menuToProd.Quantity;i++)
+                            menu.Products.Add(product);
+                    }
+                        
                 }
 
 
