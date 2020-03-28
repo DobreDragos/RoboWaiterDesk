@@ -1,5 +1,4 @@
 *.cache
-*.config
 *.CopyComplete
 bin
 obj
