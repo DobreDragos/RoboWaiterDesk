@@ -32,6 +32,7 @@ namespace RoboDesk
         protected override void ExecuteInsertDb(Tables model)
         {
             var id = ((ITablesDE)DbAccess).Insert(model);
+            model.Id = id;
         }
 
         protected override void ExecuteUpdateDb(Tables model)

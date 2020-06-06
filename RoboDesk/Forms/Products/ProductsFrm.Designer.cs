@@ -62,33 +62,44 @@
             // lbl_Name
             // 
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_Name.Location = new System.Drawing.Point(11, 9);
+            this.lbl_Name.BackColor = System.Drawing.Color.White;
+            this.lbl_Name.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_Name.Location = new System.Drawing.Point(10, 9);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(45, 19);
+            this.lbl_Name.Style = MetroFramework.MetroColorStyle.White;
             this.lbl_Name.TabIndex = 6;
             this.lbl_Name.Text = "Name";
             this.lbl_Name.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_Name.UseStyleColors = true;
             // 
             // lbl_Code
             // 
             this.lbl_Code.AutoSize = true;
-            this.lbl_Code.Location = new System.Drawing.Point(10, 58);
+            this.lbl_Code.BackColor = System.Drawing.Color.White;
+            this.lbl_Code.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_Code.Location = new System.Drawing.Point(10, 53);
             this.lbl_Code.Name = "lbl_Code";
             this.lbl_Code.Size = new System.Drawing.Size(41, 19);
+            this.lbl_Code.Style = MetroFramework.MetroColorStyle.White;
             this.lbl_Code.TabIndex = 7;
             this.lbl_Code.Text = "Code";
             this.lbl_Code.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_Code.UseStyleColors = true;
             // 
             // lbl_Family
             // 
             this.lbl_Family.AutoSize = true;
-            this.lbl_Family.Location = new System.Drawing.Point(10, 107);
+            this.lbl_Family.BackColor = System.Drawing.Color.White;
+            this.lbl_Family.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_Family.Location = new System.Drawing.Point(10, 100);
             this.lbl_Family.Name = "lbl_Family";
             this.lbl_Family.Size = new System.Drawing.Size(46, 19);
+            this.lbl_Family.Style = MetroFramework.MetroColorStyle.White;
             this.lbl_Family.TabIndex = 8;
             this.lbl_Family.Text = "Family";
             this.lbl_Family.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_Family.UseStyleColors = true;
             // 
             // tb_Name
             // 
@@ -220,12 +231,16 @@
             // 
             this.lbl_Enabled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Enabled.AutoSize = true;
-            this.lbl_Enabled.Location = new System.Drawing.Point(403, 149);
+            this.lbl_Enabled.BackColor = System.Drawing.Color.White;
+            this.lbl_Enabled.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_Enabled.Location = new System.Drawing.Point(403, 151);
             this.lbl_Enabled.Name = "lbl_Enabled";
             this.lbl_Enabled.Size = new System.Drawing.Size(56, 19);
+            this.lbl_Enabled.Style = MetroFramework.MetroColorStyle.White;
             this.lbl_Enabled.TabIndex = 32;
             this.lbl_Enabled.Text = "Enabled";
             this.lbl_Enabled.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_Enabled.UseStyleColors = true;
             // 
             // tb_Alergens
             // 
@@ -251,12 +266,16 @@
             // lbl_Alergens
             // 
             this.lbl_Alergens.AutoSize = true;
-            this.lbl_Alergens.Location = new System.Drawing.Point(10, 149);
+            this.lbl_Alergens.BackColor = System.Drawing.Color.White;
+            this.lbl_Alergens.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_Alergens.Location = new System.Drawing.Point(10, 146);
             this.lbl_Alergens.Name = "lbl_Alergens";
             this.lbl_Alergens.Size = new System.Drawing.Size(60, 19);
+            this.lbl_Alergens.Style = MetroFramework.MetroColorStyle.White;
             this.lbl_Alergens.TabIndex = 30;
             this.lbl_Alergens.Text = "Alergens";
             this.lbl_Alergens.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_Alergens.UseStyleColors = true;
             // 
             // tb_Code
             // 
@@ -346,34 +365,46 @@
             // 
             this.lbl_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Discount.AutoSize = true;
-            this.lbl_Discount.Location = new System.Drawing.Point(401, 107);
+            this.lbl_Discount.BackColor = System.Drawing.Color.White;
+            this.lbl_Discount.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_Discount.Location = new System.Drawing.Point(401, 100);
             this.lbl_Discount.Name = "lbl_Discount";
             this.lbl_Discount.Size = new System.Drawing.Size(58, 19);
+            this.lbl_Discount.Style = MetroFramework.MetroColorStyle.White;
             this.lbl_Discount.TabIndex = 24;
             this.lbl_Discount.Text = "Discount";
             this.lbl_Discount.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_Discount.UseStyleColors = true;
             // 
             // lbl_Price
             // 
             this.lbl_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Price.AutoSize = true;
-            this.lbl_Price.Location = new System.Drawing.Point(403, 53);
+            this.lbl_Price.BackColor = System.Drawing.Color.White;
+            this.lbl_Price.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_Price.Location = new System.Drawing.Point(403, 54);
             this.lbl_Price.Name = "lbl_Price";
             this.lbl_Price.Size = new System.Drawing.Size(38, 19);
+            this.lbl_Price.Style = MetroFramework.MetroColorStyle.White;
             this.lbl_Price.TabIndex = 23;
             this.lbl_Price.Text = "Price";
             this.lbl_Price.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_Price.UseStyleColors = true;
             // 
             // lbl_Description
             // 
             this.lbl_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Description.AutoSize = true;
-            this.lbl_Description.Location = new System.Drawing.Point(401, 9);
+            this.lbl_Description.BackColor = System.Drawing.Color.White;
+            this.lbl_Description.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_Description.Location = new System.Drawing.Point(403, 9);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(74, 19);
+            this.lbl_Description.Style = MetroFramework.MetroColorStyle.White;
             this.lbl_Description.TabIndex = 22;
             this.lbl_Description.Text = "Description";
             this.lbl_Description.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_Description.UseStyleColors = true;
             // 
             // cb_Language
             // 

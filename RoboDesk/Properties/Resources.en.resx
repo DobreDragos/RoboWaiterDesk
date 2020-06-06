@@ -289,4 +289,12 @@
     <value>Products</value>
     <comment>Translation</comment>
   </data>
+  <data name="LBL_CATEGORYNAME" xml:space="preserve">
+    <value>Category name</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="LBL_CATEGORYCODE" xml:space="preserve">
+    <value>Code</value>
+    <comment>Translation</comment>
+  </data>
 </root>

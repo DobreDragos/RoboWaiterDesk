@@ -327,6 +327,24 @@ namespace RoboDesk.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Cod.
         /// </summary>
+        internal static string LBL_CATEGORYCODE {
+            get {
+                return ResourceManager.GetString("LBL_CATEGORYCODE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nume categorie.
+        /// </summary>
+        internal static string LBL_CATEGORYNAME {
+            get {
+                return ResourceManager.GetString("LBL_CATEGORYNAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cod.
+        /// </summary>
         internal static string LBL_CODE {
             get {
                 return ResourceManager.GetString("LBL_CODE", resourceCulture);

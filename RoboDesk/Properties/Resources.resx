@@ -310,4 +310,12 @@
     <value>Produse</value>
     <comment>Translation</comment>
   </data>
+  <data name="LBL_CATEGORYNAME" xml:space="preserve">
+    <value>Nume categorie</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="LBL_CATEGORYCODE" xml:space="preserve">
+    <value>Cod</value>
+    <comment>Translate</comment>
+  </data>
 </root>

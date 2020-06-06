@@ -10,7 +10,7 @@ namespace GlobalClassesStandard.Models
     public class Families : ModelBase
     {
         [IgnoredProperty]
-        public Dictionary<int, string> LangToName { get; set; }
+        public Dictionary<long, string> LangToName { get; set; }
         public string Code{ get; set; }
     }
 }

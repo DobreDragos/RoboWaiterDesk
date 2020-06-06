@@ -28,6 +28,8 @@ namespace RoboDesk
         {
             InitializeComponent();
             presenter = new CategoriesPresenter(this);
+
+            presenter.EnsureLanguages(cb_Language);
         }
         
         public DataGridView Dgv => this.dgv.DataGridView;
@@ -50,6 +52,20 @@ namespace RoboDesk
 
         public Button Btn_Cancel => this.btn_Cancel;
 
+        private Dictionary<long, string> EditedLangToName = new Dictionary<long, string>();
+
+        private void cb_Language_SelectedItemChanged(object sender, EventArgs e)
+        {
+            var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
+            EditedLangToName.TryGetValue(selectedLangId, out string name);
+            tb_CategoryName.Text = name;
+        }
+
+        private void tb_CategoryName_TextChanged(object sender, EventArgs e)
+        {
+            var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
+            EditedLangToName[selectedLangId] = tb_CategoryName.Text;
+        }
 
         public void ExecuteBackClick()
         {
@@ -58,18 +74,33 @@ namespace RoboDesk
 
         public void BindModelToView(Families selectedModel)
         {
-            //tb_Code.Text = selectedModel.Token;
+            tb_CategoryCode.Text = selectedModel.Code;
+
+            EditedLangToName = new Dictionary<long, string>();
+
+            foreach (long lang in cb_Language.Items.Select(x => x.Value))
+            {
+                EditedLangToName[lang] = presenter.GetNameBySelectedLanguage(lang, selectedModel.Id);
+            }
+            var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
+            tb_CategoryName.Text = EditedLangToName[selectedLangId];
         }
 
         public void VerifyView()
         {
-            if (tb_Code.Text == string.Empty)
+            if (tb_CategoryCode.Text == string.Empty)
                 throw new Exception("Code should not be empty!");
-            }
+
+            if (tb_CategoryName.Text == string.Empty)
+                throw new Exception("Name should not be empty!");
+        }
 
         public Families BindViewToModel(Families model)
         {
-            //model.Token = tb_Code.Text;
+            model.Code = tb_CategoryCode.Text;
+            model.LangToName = model.LangToName ?? new Dictionary<long, string>();
+            foreach (var lang in EditedLangToName.Keys)
+                model.LangToName[lang] = EditedLangToName[lang];
 
             return model;
         }
