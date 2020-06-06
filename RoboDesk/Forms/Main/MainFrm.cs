@@ -24,7 +24,12 @@ namespace RoboDesk
 
         private void btn_Settings_Click(object sender, EventArgs e)
         {
-            FormNavigator.OpenForm<RoboDesk.MenusFrm>(this);
+            //FormNavigator.OpenForm<RoboDesk.MenusFrm>(this);
+        }
+
+        private void btn_Categories_Click(object sender, EventArgs e)
+        {
+            //FormNavigator.OpenForm<RoboDesk.MenusFrm>(this);
         }
 
         private void backArrowControl1_Click(object sender, EventArgs e)

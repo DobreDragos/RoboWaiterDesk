@@ -157,12 +157,24 @@
     <value>Settings</value>
     <comment>FormTranslation</comment>
   </data>
+  <data name="BTN_CATEGORIES" xml:space="preserve">
+    <value>Categories</value>
+    <comment>FormTranslation</comment>
+  </data>
   <data name="BTN_TABLES" xml:space="preserve">
     <value>Tables</value>
     <comment>FormTranslation</comment>
   </data>
   <data name="CB_DEFAULT_SELECT" xml:space="preserve">
     <value>Select Item...</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="LBL_ENABLED" xml:space="preserve">
+    <value>Enabled</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="CB_ENABLED" xml:space="preserve">
+    <value></value>
     <comment>FormTranslation</comment>
   </data>
   <data name="DGV_ALERGENS" xml:space="preserve">

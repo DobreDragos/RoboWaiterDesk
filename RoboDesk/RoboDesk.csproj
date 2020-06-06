@@ -84,6 +84,13 @@
     </Compile>
     <Compile Include="Forms\Base\CrudPresenterBase.cs" />
     <Compile Include="Forms\Base\PresenterBase.cs" />
+    <Compile Include="Forms\Categories\CategoriesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Categories\CategoriesFrm.Designer.cs">
+      <DependentUpon>CategoriesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Categories\CategoriesPresenter.cs" />
     <Compile Include="Forms\Login\LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +126,7 @@
     <Compile Include="Forms\Main\MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Categories\ICategoriesFrm.cs" />
     <Compile Include="Interfaces\Tables\ITablesFrm.cs" />
     <Compile Include="Interfaces\ICustomButton.cs" />
     <Compile Include="Interfaces\Login\ILoginFrm.cs" />
@@ -141,6 +149,9 @@
     <EmbeddedResource Include="CustomControls\CustomGrid.resx">
       <DependentUpon>CustomGrid.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Categories\CategoriesFrm.resx">
+      <DependentUpon>CategoriesFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,7 +167,9 @@
     <EmbeddedResource Include="Forms\Main\MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.en.resx" />
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -214,6 +227,7 @@
   <ItemGroup>
     <Content Include="Resources\arrow.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -73,6 +73,7 @@ namespace RoboDesk
         protected override void ExecuteInsertDb(Products model)
         {
             var id = ((IProductsDE)DbAccess).Insert(model);
+            model.Id = id;
             Context.UpdateTranslations(model.Id, NamesObjectTypeId, model.LangToName);
             Context.UpdateTranslations(model.Id, DescriptionObjectTypeId, model.LangToDescription);
             Context.UpdateTranslations(model.Id, AlergensObjectTypeId, model.LangToAlergens);

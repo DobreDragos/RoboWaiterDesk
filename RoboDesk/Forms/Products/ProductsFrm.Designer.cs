@@ -37,6 +37,8 @@
             this.btn_Save = new VIBlend.WinForms.Controls.vCircularButton();
             this.tb_Search = new VIBlend.WinForms.Controls.vTextBox();
             this.detailsPanel = new MetroFramework.Controls.MetroPanel();
+            this.cb_Enabled = new VIBlend.WinForms.Controls.vCheckBox();
+            this.lbl_Enabled = new MetroFramework.Controls.MetroLabel();
             this.tb_Alergens = new VIBlend.WinForms.Controls.vTextBox();
             this.lbl_Alergens = new MetroFramework.Controls.MetroLabel();
             this.cb_Language = new VIBlend.WinForms.Controls.vComboBox();
@@ -54,6 +56,7 @@
             this.btn_Cancel = new VIBlend.WinForms.Controls.vCircularButton();
             this.btn_Delete = new VIBlend.WinForms.Controls.vCircularButton();
             this.detailsPanel.SuspendLayout();
+            this.btn_Edit.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Name
@@ -158,7 +161,7 @@
             this.tb_Search.ControlBorderColor = System.Drawing.Color.DimGray;
             this.tb_Search.DefaultText = "Search by name";
             this.tb_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Search.Location = new System.Drawing.Point(589, 179);
+            this.tb_Search.Location = new System.Drawing.Point(51, 69);
             this.tb_Search.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Search.MaxLength = 50;
             this.tb_Search.MinimumSize = new System.Drawing.Size(133, 37);
@@ -178,13 +181,14 @@
             this.detailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.detailsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.detailsPanel.Controls.Add(this.cb_Enabled);
+            this.detailsPanel.Controls.Add(this.lbl_Enabled);
             this.detailsPanel.Controls.Add(this.tb_Alergens);
             this.detailsPanel.Controls.Add(this.lbl_Alergens);
             this.detailsPanel.Controls.Add(this.cb_Language);
             this.detailsPanel.Controls.Add(this.tb_Code);
             this.detailsPanel.Controls.Add(this.tb_Discount);
             this.detailsPanel.Controls.Add(this.tb_Price);
-            this.detailsPanel.Controls.Add(this.tb_Search);
             this.detailsPanel.Controls.Add(this.tb_Description);
             this.detailsPanel.Controls.Add(this.lbl_Discount);
             this.detailsPanel.Controls.Add(this.lbl_Price);
@@ -206,6 +210,30 @@
             this.detailsPanel.VerticalScrollbarBarColor = true;
             this.detailsPanel.VerticalScrollbarHighlightOnWheel = false;
             this.detailsPanel.VerticalScrollbarSize = 13;
+            // 
+            // cb_Enabled
+            // 
+            this.cb_Enabled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_Enabled.AutoSize = true;
+            this.cb_Enabled.BackColor = System.Drawing.Color.Transparent;
+            this.cb_Enabled.Location = new System.Drawing.Point(652, 186);
+            this.cb_Enabled.Name = "cb_Enabled";
+            this.cb_Enabled.Size = new System.Drawing.Size(18, 17);
+            this.cb_Enabled.TabIndex = 33;
+            this.cb_Enabled.UseVisualStyleBackColor = true;
+            this.cb_Enabled.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
+            // 
+            // lbl_Enabled
+            // 
+            this.lbl_Enabled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Enabled.AutoSize = true;
+            this.lbl_Enabled.Location = new System.Drawing.Point(537, 183);
+            this.lbl_Enabled.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Enabled.Name = "lbl_Enabled";
+            this.lbl_Enabled.Size = new System.Drawing.Size(59, 20);
+            this.lbl_Enabled.TabIndex = 32;
+            this.lbl_Enabled.Text = "Enabled";
+            this.lbl_Enabled.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // tb_Alergens
             // 
@@ -415,6 +443,7 @@
             // 
             this.btn_Edit.AllowAnimations = true;
             this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Edit.Controls.Add(this.tb_Search);
             this.btn_Edit.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.btn_Edit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Edit.HoverEffectsEnabled = true;
@@ -504,6 +533,7 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();
+            this.btn_Edit.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -533,5 +563,7 @@
         private VIBlend.WinForms.Controls.vCircularButton btn_Delete;
         private VIBlend.WinForms.Controls.vTextBox tb_Alergens;
         private MetroFramework.Controls.MetroLabel lbl_Alergens;
+        private MetroFramework.Controls.MetroLabel lbl_Enabled;
+        private VIBlend.WinForms.Controls.vCheckBox cb_Enabled;
     }
 }

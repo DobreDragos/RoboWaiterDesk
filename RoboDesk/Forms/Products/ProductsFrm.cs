@@ -68,6 +68,7 @@ namespace RoboDesk
         {
             EditedLangToName = new Dictionary<long, string>();
             EditedLangToDescription = new Dictionary<long, string>();
+            EditedLangToAlergens = new Dictionary<long, string>();
 
             foreach (long lang in cb_Language.Items.Select(x => x.Value))
             {
@@ -88,6 +89,7 @@ namespace RoboDesk
             tb_Name.Text = EditedLangToName[selectedLangId];
             tb_Description.Text = EditedLangToDescription[selectedLangId];
             tb_Alergens.Text = EditedLangToAlergens[selectedLangId];
+            cb_Enabled.Checked = selectedModel.Enabled;
         }
 
         public void VerifyView()
@@ -106,6 +108,7 @@ namespace RoboDesk
             _selectedModel.Discount = Decimal.Parse(tb_Discount.Text);
             _selectedModel.Price = Decimal.Parse(tb_Price.Text);
             _selectedModel.IdFamily = (long)cb_Family.SelectedValue;
+            _selectedModel.Enabled = cb_Enabled.Checked;
 
             _selectedModel.LangToName = _selectedModel.LangToName ?? new Dictionary<long, string>();
             foreach (var lang in EditedLangToName.Keys)

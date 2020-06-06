@@ -34,12 +34,14 @@
             this.btn_Menus = new VIBlend.WinForms.Controls.vButton();
             this.btn_Settings = new VIBlend.WinForms.Controls.vButton();
             this.backArrowControl1 = new RoboDesk.CustomControls.BackArrowControl();
+            this.btn_Categories = new VIBlend.WinForms.Controls.vButton();
             this.SuspendLayout();
             // 
             // btn_Tables
             // 
             this.btn_Tables.AllowAnimations = true;
             this.btn_Tables.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Tables.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tables.Location = new System.Drawing.Point(134, 112);
             this.btn_Tables.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tables.Name = "btn_Tables";
@@ -56,6 +58,7 @@
             // 
             this.btn_Products.AllowAnimations = true;
             this.btn_Products.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Products.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Products.Location = new System.Drawing.Point(134, 351);
             this.btn_Products.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Products.Name = "btn_Products";
@@ -72,6 +75,8 @@
             // 
             this.btn_Menus.AllowAnimations = true;
             this.btn_Menus.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Menus.Enabled = false;
+            this.btn_Menus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Menus.Location = new System.Drawing.Point(465, 112);
             this.btn_Menus.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Menus.Name = "btn_Menus";
@@ -88,6 +93,8 @@
             // 
             this.btn_Settings.AllowAnimations = true;
             this.btn_Settings.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Settings.Enabled = false;
+            this.btn_Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Settings.Location = new System.Drawing.Point(791, 112);
             this.btn_Settings.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Settings.Name = "btn_Settings";
@@ -111,11 +118,29 @@
             this.backArrowControl1.TabIndex = 2;
             this.backArrowControl1.Click += new System.EventHandler(this.backArrowControl1_Click);
             // 
+            // btn_Categories
+            // 
+            this.btn_Categories.AllowAnimations = true;
+            this.btn_Categories.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Categories.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Categories.Location = new System.Drawing.Point(465, 351);
+            this.btn_Categories.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Categories.Name = "btn_Categories";
+            this.btn_Categories.RoundedCornersMask = ((byte)(15));
+            this.btn_Categories.RoundedCornersRadius = 10;
+            this.btn_Categories.Size = new System.Drawing.Size(176, 142);
+            this.btn_Categories.TabIndex = 16;
+            this.btn_Categories.Text = "btn_Categories";
+            this.btn_Categories.UseVisualStyleBackColor = false;
+            this.btn_Categories.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
+            this.btn_Categories.Click += new System.EventHandler(this.btn_Categories_Click);
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 615);
+            this.Controls.Add(this.btn_Categories);
             this.Controls.Add(this.btn_Tables);
             this.Controls.Add(this.btn_Products);
             this.Controls.Add(this.btn_Menus);
@@ -125,7 +150,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainFrm";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
-            this.Text = "Main";
+            this.Text = "RoboDeskEditor";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.ResumeLayout(false);
 
@@ -137,5 +162,6 @@
         private VIBlend.WinForms.Controls.vButton btn_Products;
         private VIBlend.WinForms.Controls.vButton btn_Menus;
         private VIBlend.WinForms.Controls.vButton btn_Settings;
+        private VIBlend.WinForms.Controls.vButton btn_Categories;
     }
 }

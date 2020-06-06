@@ -117,6 +117,15 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Categorii.
+        /// </summary>
+        internal static string BTN_CATEGORIES {
+            get {
+                return ResourceManager.GetString("BTN_CATEGORIES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to STERGE.
         /// </summary>
         internal static string BTN_DELETE {
@@ -203,6 +212,15 @@ namespace RoboDesk.Properties {
         internal static string CB_DEFAULT_SELECT {
             get {
                 return ResourceManager.GetString("CB_DEFAULT_SELECT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string CB_ENABLED {
+            get {
+                return ResourceManager.GetString("CB_ENABLED", resourceCulture);
             }
         }
         
@@ -321,6 +339,15 @@ namespace RoboDesk.Properties {
         internal static string LBL_DISCOUNT {
             get {
                 return ResourceManager.GetString("LBL_DISCOUNT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Activat.
+        /// </summary>
+        internal static string LBL_ENABLED {
+            get {
+                return ResourceManager.GetString("LBL_ENABLED", resourceCulture);
             }
         }
         
