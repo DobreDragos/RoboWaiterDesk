@@ -10,7 +10,7 @@ namespace RoboDesk.Utils
     {
         public static int TransitionSpeed { get; set; }
 
-        static FormNavigator() { TransitionSpeed = 20; }
+        static FormNavigator() { }
 
         /// <summary>
         /// Opens any form that implements <see cref="IFormBase"/> 
@@ -59,27 +59,28 @@ namespace RoboDesk.Utils
                 while (formToClose.Opacity > 0.1)
                 {
                     System.Threading.Thread.Sleep(TransitionSpeed);
-                    formToClose.Opacity -= 0.2;
+                    formToClose.Opacity -= 0.05;
                 }
-                formToClose.Opacity = 0;
-            }
 
+            }
+            formToClose.Opacity = 0;
             formToClose.Close();
         }
 
         private static void FadeInForm(IFormBase form)
         {
+            form.Opacity = 0.1;
+            form.Show();
             if (TransitionSpeed > 0)
             {
-                form.Opacity = 0.1;
-                form.Show();
                 Application.DoEvents(); //do the render panel events
                 while (form.Opacity < 1.0)
                 {
                     System.Threading.Thread.Sleep(TransitionSpeed);
-                    form.Opacity += 0.2;
+                    form.Opacity += 0.05;
                 }
             }
+
             form.Opacity = 1;
         }
     }

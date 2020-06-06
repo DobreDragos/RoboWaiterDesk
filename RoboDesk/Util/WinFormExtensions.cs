@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Resources;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +19,7 @@ namespace RoboDesk.Util
             try
             {
                 IEnumerable<Control> ctrlList = GetContainedControls(ctrl);
-
+                ctrl.Text = res.GetString(ctrl.Name) ?? "???";
                 foreach (Control c in ctrlList)
                 {
                     var name = c.Name.ToUpper();

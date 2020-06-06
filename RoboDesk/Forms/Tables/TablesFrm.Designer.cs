@@ -252,7 +252,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TablesFrm";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
-            this.Text = "Alergens";
+            this.Text = "title_Tables";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();

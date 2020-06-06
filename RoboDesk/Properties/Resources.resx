@@ -227,7 +227,7 @@
     <comment>FormTranslation</comment>
   </data>
   <data name="CB_ENABLED" xml:space="preserve">
-    <value></value>
+    <value />
     <comment>FormTranslation</comment>
   </data>
   <data name="TB_SEARCH" xml:space="preserve">
@@ -282,6 +282,14 @@
     <value>Alergeni</value>
     <comment>Translation</comment>
   </data>
+  <data name="TablesFrm" xml:space="preserve">
+    <value>Mese</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="CategoriesFrm" xml:space="preserve">
+    <value>Categorii</value>
+    <comment>Translation</comment>
+  </data>
   <data name="LBL_EXISTING_PRODUCTS" xml:space="preserve">
     <value>Produse Existente</value>
     <comment>Translate</comment>
@@ -289,5 +297,17 @@
   <data name="LBL_MENU_PRODUCTS" xml:space="preserve">
     <value>Produse Meniu</value>
     <comment>Translate</comment>
+  </data>
+  <data name="LoginFrm" xml:space="preserve">
+    <value>RoboDesk</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="MainFrm" xml:space="preserve">
+    <value>RoboDesk</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="ProductsFrm" xml:space="preserve">
+    <value>Produse</value>
+    <comment>Translation</comment>
   </data>
 </root>

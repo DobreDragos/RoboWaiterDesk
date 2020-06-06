@@ -212,7 +212,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(788, 534);
-            this.Name = "Login";
+            this.Name = "LoginFrm";
             this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "RoboDesk";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;

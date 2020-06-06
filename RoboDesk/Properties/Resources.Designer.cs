@@ -207,6 +207,15 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Categorii.
+        /// </summary>
+        internal static string CategoriesFrm {
+            get {
+                return ResourceManager.GetString("CategoriesFrm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Selecteaza item....
         /// </summary>
         internal static string CB_DEFAULT_SELECT {
@@ -415,12 +424,48 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RoboDesk.
+        /// </summary>
+        internal static string LoginFrm {
+            get {
+                return ResourceManager.GetString("LoginFrm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RoboDesk.
+        /// </summary>
+        internal static string MainFrm {
+            get {
+                return ResourceManager.GetString("MainFrm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Produse.
+        /// </summary>
+        internal static string ProductsFrm {
+            get {
+                return ResourceManager.GetString("ProductsFrm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap ro {
             get {
                 object obj = ResourceManager.GetObject("ro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mese.
+        /// </summary>
+        internal static string TablesFrm {
+            get {
+                return ResourceManager.GetString("TablesFrm", resourceCulture);
             }
         }
         

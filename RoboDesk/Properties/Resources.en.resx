@@ -174,7 +174,7 @@
     <comment>FormTranslation</comment>
   </data>
   <data name="CB_ENABLED" xml:space="preserve">
-    <value></value>
+    <value />
     <comment>FormTranslation</comment>
   </data>
   <data name="DGV_ALERGENS" xml:space="preserve">
@@ -211,6 +211,14 @@
   </data>
   <data name="LBL_ALERGENS" xml:space="preserve">
     <value>Alergens</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="TablesFrm" xml:space="preserve">
+    <value>Tables</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="CategoriesFrm" xml:space="preserve">
+    <value>Categories</value>
     <comment>Translation</comment>
   </data>
   <data name="LBL_CODE" xml:space="preserve">
@@ -268,5 +276,17 @@
   <data name="WAR_DELETE" xml:space="preserve">
     <value>Are you sure you want to delete this item?</value>
     <comment>WAR</comment>
+  </data>
+  <data name="LoginFrm" xml:space="preserve">
+    <value>RoboDesk</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="MainFrm" xml:space="preserve">
+    <value>RoboDesk</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="ProductsFrm" xml:space="preserve">
+    <value>Products</value>
+    <comment>Translation</comment>
   </data>
 </root>
