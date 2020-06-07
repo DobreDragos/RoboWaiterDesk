@@ -17,6 +17,10 @@ namespace GlobalClassesStandard.Models
         public decimal Price { get; set; }
         public bool Enabled { get; set; }
         public decimal Discount { get; set; }
+        public DateTime? DiscountStart { get; set; }
+        public DateTime? DiscountEnd { get; set; }
+        public int DiscountType { get; set; }
+
 
         [IgnoredProperty]
         public Dictionary<long, string> LangToDescription { get; set; }

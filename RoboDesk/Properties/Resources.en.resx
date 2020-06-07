@@ -297,4 +297,8 @@
     <value>Code</value>
     <comment>Translation</comment>
   </data>
+  <data name="LBL_DISCOUNTINTERVAL" xml:space="preserve">
+    <value>Discount Interval</value>
+    <comment>Translation</comment>
+  </data>
 </root>

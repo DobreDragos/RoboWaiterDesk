@@ -18,6 +18,7 @@ using RoboDesk.Utils;
 using In.Sontx.SimpleDataGridViewPaging;
 using RoboDesk.CustomControls;
 using VIBlend.WinForms.Controls;
+using System.Text.RegularExpressions;
 
 namespace RoboDesk
 {
@@ -30,6 +31,7 @@ namespace RoboDesk
             presenter = new ProductsPresenter(this);
 
             presenter.EnsureFamilies(cb_Family);
+            presenter.EnsureDiscountTypes(cb_DiscountIntervalType);
             presenter.EnsureLanguages(cb_Language);
         }
 
@@ -90,6 +92,16 @@ namespace RoboDesk
             tb_Description.Text = EditedLangToDescription[selectedLangId];
             tb_Alergens.Text = EditedLangToAlergens[selectedLangId];
             cb_Enabled.Checked = selectedModel.Enabled;
+            if (selectedModel.DiscountStart != null)
+            {
+                tb_DiscountInterval.Text = $"{selectedModel.DiscountStart.Value.ToString("HH:mm")}-{selectedModel.DiscountEnd.Value.ToString("HH:mm")}";
+                cb_DiscountIntervalType.SelectedValue = selectedModel.DiscountType;
+            }
+            else
+            {
+                tb_DiscountInterval.Text = "";
+                cb_DiscountIntervalType.SelectedValue = (int)DiscountIntervalType.Always;
+            }
         }
 
         public void VerifyView()
@@ -100,6 +112,9 @@ namespace RoboDesk
                 throw new Exception("Name should not be empty!");
             if (cb_Family.SelectedValue == null)
                 throw new Exception("Family should not be empty!");
+            if (tb_DiscountInterval.Text != "" && tb_Discount.Text != "" && !Regex.IsMatch(tb_DiscountInterval.Text.Replace(" ", ""), @"^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]-(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$")) {
+                throw new Exception("Please set a correct Discount Interval! It should be empty or like '08:00 - 13:30'");
+            }
         }
 
         public Products BindViewToModel(Products _selectedModel)
@@ -108,6 +123,15 @@ namespace RoboDesk
             _selectedModel.Discount = Decimal.Parse(tb_Discount.Text);
             _selectedModel.Price = Decimal.Parse(tb_Price.Text);
             _selectedModel.IdFamily = (long)cb_Family.SelectedValue;
+            _selectedModel.DiscountType = (int)cb_DiscountIntervalType.SelectedValue;
+
+            var discountSelection = tb_DiscountInterval.Text.Replace(" ", "").Split('-');
+            if (discountSelection.Count() == 2)
+            {
+                _selectedModel.DiscountStart = DateTime.Parse(discountSelection[0]);
+                _selectedModel.DiscountEnd = DateTime.Parse(discountSelection[1]);
+            }
+
             _selectedModel.Enabled = cb_Enabled.Checked;
 
             _selectedModel.LangToName = _selectedModel.LangToName ?? new Dictionary<long, string>();

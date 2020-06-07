@@ -31,6 +31,19 @@ namespace RoboDesk
             ModelIdToAlergensByLanguageDictionary = Context.GetTranslations(AlergensObjectTypeId);
         }
 
+        internal void EnsureDiscountTypes(vComboBox cb)
+        {
+            List<Tuple<int, string>> myList = new List<Tuple<int, string>>();
+            foreach (var en in Enum.GetValues(typeof(DiscountIntervalType)).Cast<DiscountIntervalType>())
+            {
+                myList.Add(new Tuple<int, string>((int)en, en.ToString()));
+            }
+
+            cb.DisplayMember = "Item2";
+            cb.ValueMember = "Item1";
+            cb.DataSource = myList;
+        }
+
         public string GetNameBySelectedLanguage(long languageId, long selectedId)
         {
             string name = "";

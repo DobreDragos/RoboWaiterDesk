@@ -370,6 +370,15 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Interval Discount.
+        /// </summary>
+        internal static string LBL_DISCOUNTINTERVAL {
+            get {
+                return ResourceManager.GetString("LBL_DISCOUNTINTERVAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Activat.
         /// </summary>
         internal static string LBL_ENABLED {

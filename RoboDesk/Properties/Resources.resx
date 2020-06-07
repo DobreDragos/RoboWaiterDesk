@@ -318,4 +318,8 @@
     <value>Cod</value>
     <comment>Translate</comment>
   </data>
+  <data name="LBL_DISCOUNTINTERVAL" xml:space="preserve">
+    <value>Interval Discount</value>
+    <comment>Translation</comment>
+  </data>
 </root>

@@ -22,6 +22,13 @@ namespace DataLayerHelper.Enums
         Products_Alergens
     }
 
+    public enum DiscountIntervalType
+    {
+        Always = 1,
+        WorkingDays=2,
+        Weekends = 3,
+    }
+
     public enum LanguageId
     {
         Ro = 1,
