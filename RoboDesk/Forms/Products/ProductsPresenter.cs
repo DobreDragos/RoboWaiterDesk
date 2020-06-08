@@ -22,6 +22,7 @@ namespace RoboDesk
         public ProductsPresenter(IProductsFrm view) : base(view)
         {
             RefreshTranslations();
+            Families = Context.Get<IFamiliesDE>().GetAll();
         }
 
         private void RefreshTranslations()
@@ -67,6 +68,8 @@ namespace RoboDesk
         }
 
         public override IDgvDbAccess DbAccess => Context.Get<IProductsDE>();
+
+        public List<Families> Families { get; }
 
         private const ObjectTypeId NamesObjectTypeId = ObjectTypeId.Products_Name;
 
@@ -122,8 +125,9 @@ namespace RoboDesk
         protected override object GetGridPage(int pageOffset, int maxRecords)
         {
             var products = base.GetGridPage(pageOffset, maxRecords);
+            var prodList = products as List<Products>;
 
-            foreach (var product in products as List<Products>)
+            foreach (var product in prodList)
             {
                 product.LangToName = ModelIdToNamesByLanguageDictionary.ContainsKey(product.Id)?
                     ModelIdToNamesByLanguageDictionary[product.Id] : new Dictionary<long, string>();
@@ -133,9 +137,11 @@ namespace RoboDesk
 
                 product.LangToAlergens= ModelIdToAlergensByLanguageDictionary.ContainsKey(product.Id) ?
                     ModelIdToAlergensByLanguageDictionary[product.Id] : new Dictionary<long, string>();
+
+                product.FamilyCode = Families.FirstOrDefault(x => x.Id == product.IdFamily).Code;
             }
 
-            return products;
+            return prodList.OrderBy(x => x.Code).ThenBy(x => x.IdFamily).ToList();
         }
     }
 }

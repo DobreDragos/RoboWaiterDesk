@@ -523,7 +523,7 @@
             this.dgv.DataSource = null;
             this.dgv.Location = new System.Drawing.Point(31, 362);
             this.dgv.Margin = new System.Windows.Forms.Padding(5);
-            this.dgv.MaxRecords = 100;
+            this.dgv.MaxRecords = 20;
             this.dgv.Name = "dgv";
             this.dgv.Size = new System.Drawing.Size(1020, 218);
             this.dgv.TabIndex = 28;

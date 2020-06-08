@@ -1,4 +1,5 @@
 ﻿using DataLayerHelper.Attributes;
+using DataLayerHelper.Enums;
 using DataLayerHelper.Models;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,8 @@ namespace GlobalClassesStandard.Models
         public DateTime? DiscountEnd { get; set; }
         public int DiscountType { get; set; }
 
-
+        [IgnoredProperty]
+        public string FamilyCode { get; set; }
         [IgnoredProperty]
         public Dictionary<long, string> LangToDescription { get; set; }
         [IgnoredProperty]

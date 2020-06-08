@@ -261,6 +261,15 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cod Familie.
+        /// </summary>
+        internal static string DGV_FAMILYCODE {
+            get {
+                return ResourceManager.GetString("DGV_FAMILYCODE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nume.
         /// </summary>
         internal static string DGV_NAME {

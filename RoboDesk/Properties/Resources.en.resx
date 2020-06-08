@@ -301,4 +301,8 @@
     <value>Discount Interval</value>
     <comment>Translation</comment>
   </data>
+  <data name="DGV_FAMILYCODE" xml:space="preserve">
+    <value>Family Code</value>
+    <comment>DGColumnTranslation</comment>
+  </data>
 </root>
