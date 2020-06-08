@@ -92,16 +92,8 @@ namespace RoboDesk
             tb_Description.Text = EditedLangToDescription[selectedLangId];
             tb_Alergens.Text = EditedLangToAlergens[selectedLangId];
             cb_Enabled.Checked = selectedModel.Enabled;
-            if (selectedModel.DiscountStart != null)
-            {
-                tb_DiscountInterval.Text = $"{selectedModel.DiscountStart.Value.ToString("HH:mm")}-{selectedModel.DiscountEnd.Value.ToString("HH:mm")}";
-                cb_DiscountIntervalType.SelectedValue = selectedModel.DiscountType;
-            }
-            else
-            {
-                tb_DiscountInterval.Text = "";
-                cb_DiscountIntervalType.SelectedValue = (int)DiscountIntervalType.Always;
-            }
+            tb_DiscountInterval.Text = selectedModel.DiscountStart == null ? "" : $"{selectedModel.DiscountStart.Value.ToString("HH:mm")}-{selectedModel.DiscountEnd.Value.ToString("HH:mm")}"; ;
+            cb_DiscountIntervalType.SelectedValue = selectedModel.DiscountType;
         }
 
         public void VerifyView()

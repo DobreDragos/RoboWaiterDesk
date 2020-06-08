@@ -24,9 +24,9 @@ namespace DataLayerHelper.Enums
 
     public enum DiscountIntervalType
     {
-        Always = 1,
-        WorkingDays=2,
-        Weekends = 3,
+        Always = 0,
+        WorkingDays=1,
+        Weekends = 2,
     }
 
     public enum LanguageId
