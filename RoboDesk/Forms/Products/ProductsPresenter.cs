@@ -124,8 +124,9 @@ namespace RoboDesk
 
         protected override object GetGridPage(int pageOffset, int maxRecords)
         {
-            var products = base.GetGridPage(pageOffset, maxRecords);
-            var prodList = products as List<Products>;
+            var prodList = ((IProductsDE)DbAccess).GetAll()
+                .OrderBy(x => x.IdFamily).ThenBy(x => x.Code)
+                .Skip(pageOffset).Take(maxRecords).ToList();
 
             foreach (var product in prodList)
             {
@@ -141,7 +142,7 @@ namespace RoboDesk
                 product.FamilyCode = Families.FirstOrDefault(x => x.Id == product.IdFamily).Code;
             }
 
-            return prodList.OrderBy(x => x.Code).ThenBy(x => x.IdFamily).ToList();
+            return prodList;
         }
     }
 }
