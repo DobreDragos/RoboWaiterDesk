@@ -37,6 +37,7 @@
             this.btn_Save = new VIBlend.WinForms.Controls.vCircularButton();
             this.tb_Search = new VIBlend.WinForms.Controls.vTextBox();
             this.detailsPanel = new MetroFramework.Controls.MetroPanel();
+            this.cb_DiscountIntervalType = new VIBlend.WinForms.Controls.vComboBox();
             this.lbl_DiscountInterval = new MetroFramework.Controls.MetroLabel();
             this.tb_DiscountInterval = new VIBlend.WinForms.Controls.vTextBox();
             this.cb_Enabled = new VIBlend.WinForms.Controls.vCheckBox();
@@ -57,7 +58,6 @@
             this.btn_Cancel = new VIBlend.WinForms.Controls.vCircularButton();
             this.btn_Delete = new VIBlend.WinForms.Controls.vCircularButton();
             this.ToolTip = new MetroFramework.Components.MetroToolTip();
-            this.cb_DiscountIntervalType = new VIBlend.WinForms.Controls.vComboBox();
             this.backArrowControl1 = new RoboDesk.CustomControls.BackArrowControl();
             this.detailsPanel.SuspendLayout();
             this.btn_Edit.SuspendLayout();
@@ -117,7 +117,7 @@
             this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tb_Name.Location = new System.Drawing.Point(109, 11);
             this.tb_Name.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_Name.MaxLength = 50;
+            this.tb_Name.MaxLength = 100;
             this.tb_Name.MinimumSize = new System.Drawing.Size(133, 37);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.PasswordChar = '\0';
@@ -228,6 +228,27 @@
             this.detailsPanel.VerticalScrollbarBarColor = true;
             this.detailsPanel.VerticalScrollbarHighlightOnWheel = false;
             this.detailsPanel.VerticalScrollbarSize = 13;
+            // 
+            // cb_DiscountIntervalType
+            // 
+            this.cb_DiscountIntervalType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_DiscountIntervalType.BackColor = System.Drawing.Color.White;
+            this.cb_DiscountIntervalType.DisplayMember = "";
+            this.cb_DiscountIntervalType.DropDownMaximumSize = new System.Drawing.Size(1000, 1000);
+            this.cb_DiscountIntervalType.DropDownMinimumSize = new System.Drawing.Size(10, 10);
+            this.cb_DiscountIntervalType.DropDownResizeDirection = VIBlend.WinForms.Controls.SizingDirection.Both;
+            this.cb_DiscountIntervalType.DropDownWidth = 118;
+            this.cb_DiscountIntervalType.Location = new System.Drawing.Point(825, 123);
+            this.cb_DiscountIntervalType.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_DiscountIntervalType.Name = "cb_DiscountIntervalType";
+            this.cb_DiscountIntervalType.RoundedCornersMaskListItem = ((byte)(15));
+            this.cb_DiscountIntervalType.Size = new System.Drawing.Size(118, 36);
+            this.cb_DiscountIntervalType.TabIndex = 36;
+            this.cb_DiscountIntervalType.UseThemeBackColor = false;
+            this.cb_DiscountIntervalType.UseThemeDropDownArrowColor = true;
+            this.cb_DiscountIntervalType.ValueMember = "";
+            this.cb_DiscountIntervalType.VIBlendScrollBarsTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
+            this.cb_DiscountIntervalType.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
             // 
             // lbl_DiscountInterval
             // 
@@ -343,7 +364,7 @@
             this.tb_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tb_Code.Location = new System.Drawing.Point(109, 66);
             this.tb_Code.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_Code.MaxLength = 50;
+            this.tb_Code.MaxLength = 100;
             this.tb_Code.MinimumSize = new System.Drawing.Size(133, 37);
             this.tb_Code.Name = "tb_Code";
             this.tb_Code.PasswordChar = '\0';
@@ -409,7 +430,7 @@
             this.tb_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tb_Description.Location = new System.Drawing.Point(634, 9);
             this.tb_Description.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_Description.MaxLength = 50;
+            this.tb_Description.MaxLength = 250;
             this.tb_Description.MinimumSize = new System.Drawing.Size(133, 37);
             this.tb_Description.Name = "tb_Description";
             this.tb_Description.PasswordChar = '\0';
@@ -585,27 +606,6 @@
             this.ToolTip.Style = MetroFramework.MetroColorStyle.Blue;
             this.ToolTip.StyleManager = null;
             this.ToolTip.Theme = MetroFramework.MetroThemeStyle.Default;
-            // 
-            // cb_DiscountIntervalType
-            // 
-            this.cb_DiscountIntervalType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb_DiscountIntervalType.BackColor = System.Drawing.Color.White;
-            this.cb_DiscountIntervalType.DisplayMember = "";
-            this.cb_DiscountIntervalType.DropDownMaximumSize = new System.Drawing.Size(1000, 1000);
-            this.cb_DiscountIntervalType.DropDownMinimumSize = new System.Drawing.Size(10, 10);
-            this.cb_DiscountIntervalType.DropDownResizeDirection = VIBlend.WinForms.Controls.SizingDirection.Both;
-            this.cb_DiscountIntervalType.DropDownWidth = 118;
-            this.cb_DiscountIntervalType.Location = new System.Drawing.Point(825, 123);
-            this.cb_DiscountIntervalType.Margin = new System.Windows.Forms.Padding(4);
-            this.cb_DiscountIntervalType.Name = "cb_DiscountIntervalType";
-            this.cb_DiscountIntervalType.RoundedCornersMaskListItem = ((byte)(15));
-            this.cb_DiscountIntervalType.Size = new System.Drawing.Size(118, 36);
-            this.cb_DiscountIntervalType.TabIndex = 36;
-            this.cb_DiscountIntervalType.UseThemeBackColor = false;
-            this.cb_DiscountIntervalType.UseThemeDropDownArrowColor = true;
-            this.cb_DiscountIntervalType.ValueMember = "";
-            this.cb_DiscountIntervalType.VIBlendScrollBarsTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
-            this.cb_DiscountIntervalType.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
             // 
             // backArrowControl1
             // 
