@@ -123,6 +123,11 @@ namespace RoboDesk
                 _selectedModel.DiscountStart = DateTime.Parse(discountSelection[0]);
                 _selectedModel.DiscountEnd = DateTime.Parse(discountSelection[1]);
             }
+            else
+            {
+                _selectedModel.DiscountStart = null;
+                _selectedModel.DiscountEnd = null;
+            }
 
             _selectedModel.Enabled = cb_Enabled.Checked;
 
