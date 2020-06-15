@@ -1,4 +1,5 @@
 ﻿
+using RoboDesk.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -95,6 +96,19 @@ namespace RoboDesk.Util
             catch
             {
                 throw;
+            }
+        }
+
+        public static void SafeExecuteAction(this IFormBase form, Action action)
+        {
+            try
+            {
+                action();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogHelper.Logger.Error(ex);
+                MyMessageBox.ShowException(form, ex);
             }
         }
     }

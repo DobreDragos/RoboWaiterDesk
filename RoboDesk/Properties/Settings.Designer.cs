@@ -12,7 +12,7 @@ namespace RoboDesk.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,7 +25,7 @@ namespace RoboDesk.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Robo.s3db")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Apps\\RoboWaiter200606\\db\\Robo.s3db")]
         public string DbLocation {
             get {
                 return ((string)(this["DbLocation"]));
@@ -37,13 +37,37 @@ namespace RoboDesk.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
         public int TransitionSpeed {
             get {
                 return ((int)(this["TransitionSpeed"]));
             }
             set {
                 this["TransitionSpeed"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Valentina\\Pictures\\QR")]
+        public string QrCodeLocation {
+            get {
+                return ((string)(this["QrCodeLocation"]));
+            }
+            set {
+                this["QrCodeLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http")]
+        public string Protocol {
+            get {
+                return ((string)(this["Protocol"]));
+            }
+            set {
+                this["Protocol"] = value;
             }
         }
     }

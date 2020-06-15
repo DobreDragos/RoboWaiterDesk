@@ -3,10 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="DbLocation" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Robo.s3db</Value>
+      <Value Profile="(Default)">C:\Apps\RoboWaiter200606\db\Robo.s3db</Value>
     </Setting>
     <Setting Name="TransitionSpeed" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">15</Value>
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="QrCodeLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Valentina\Pictures\QR</Value>
+    </Setting>
+    <Setting Name="Protocol" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http</Value>
     </Setting>
   </Settings>
 </SettingsFile>

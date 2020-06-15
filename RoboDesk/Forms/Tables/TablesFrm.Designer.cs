@@ -29,30 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TablesFrm));
-            this.lbl_Code = new MetroFramework.Controls.MetroLabel();
             this.tb_Search = new VIBlend.WinForms.Controls.vTextBox();
             this.detailsPanel = new MetroFramework.Controls.MetroPanel();
             this.tb_Code = new VIBlend.WinForms.Controls.vTextBox();
+            this.lbl_Code = new MetroFramework.Controls.MetroLabel();
             this.dgv = new In.Sontx.SimpleDataGridViewPaging.DataGridViewPaging();
             this.btn_Delete = new VIBlend.WinForms.Controls.vCircularButton();
             this.btn_Cancel = new VIBlend.WinForms.Controls.vCircularButton();
             this.btn_Add = new VIBlend.WinForms.Controls.vCircularButton();
             this.btn_Edit = new VIBlend.WinForms.Controls.vCircularButton();
             this.btn_Save = new VIBlend.WinForms.Controls.vCircularButton();
+            this.qrPanel = new MetroFramework.Controls.MetroPanel();
+            this.lbl_IPValue = new MetroFramework.Controls.MetroLabel();
+            this.lbl_IP = new MetroFramework.Controls.MetroLabel();
+            this.lbl_QRLocation = new MetroFramework.Controls.MetroLabel();
+            this.btn_GenerateQR = new VIBlend.WinForms.Controls.GalleryButton();
             this.backArrowControl1 = new RoboDesk.CustomControls.BackArrowControl();
             this.detailsPanel.SuspendLayout();
+            this.qrPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbl_Code
-            // 
-            this.lbl_Code.AutoSize = true;
-            this.lbl_Code.Location = new System.Drawing.Point(15, 24);
-            this.lbl_Code.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Code.Name = "lbl_Code";
-            this.lbl_Code.Size = new System.Drawing.Size(42, 20);
-            this.lbl_Code.TabIndex = 7;
-            this.lbl_Code.Text = "Code";
-            this.lbl_Code.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // tb_Search
             // 
@@ -91,7 +86,7 @@
             this.detailsPanel.Location = new System.Drawing.Point(31, 121);
             this.detailsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.detailsPanel.Name = "detailsPanel";
-            this.detailsPanel.Size = new System.Drawing.Size(1041, 176);
+            this.detailsPanel.Size = new System.Drawing.Size(538, 176);
             this.detailsPanel.TabIndex = 26;
             this.detailsPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.detailsPanel.VerticalScrollbarBarColor = true;
@@ -118,6 +113,17 @@
             this.tb_Code.TabIndex = 31;
             this.tb_Code.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Code.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
+            // 
+            // lbl_Code
+            // 
+            this.lbl_Code.AutoSize = true;
+            this.lbl_Code.Location = new System.Drawing.Point(15, 24);
+            this.lbl_Code.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Code.Name = "lbl_Code";
+            this.lbl_Code.Size = new System.Drawing.Size(42, 20);
+            this.lbl_Code.TabIndex = 7;
+            this.lbl_Code.Text = "Code";
+            this.lbl_Code.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // dgv
             // 
@@ -224,6 +230,77 @@
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.METROBLUE;
             // 
+            // qrPanel
+            // 
+            this.qrPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.qrPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.qrPanel.Controls.Add(this.lbl_IPValue);
+            this.qrPanel.Controls.Add(this.lbl_IP);
+            this.qrPanel.Controls.Add(this.lbl_QRLocation);
+            this.qrPanel.Controls.Add(this.btn_GenerateQR);
+            this.qrPanel.HorizontalScrollbarBarColor = true;
+            this.qrPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.qrPanel.HorizontalScrollbarSize = 12;
+            this.qrPanel.Location = new System.Drawing.Point(577, 121);
+            this.qrPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.qrPanel.Name = "qrPanel";
+            this.qrPanel.Size = new System.Drawing.Size(495, 176);
+            this.qrPanel.TabIndex = 32;
+            this.qrPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.qrPanel.VerticalScrollbarBarColor = true;
+            this.qrPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.qrPanel.VerticalScrollbarSize = 13;
+            // 
+            // lbl_IPValue
+            // 
+            this.lbl_IPValue.AutoSize = true;
+            this.lbl_IPValue.Location = new System.Drawing.Point(94, 24);
+            this.lbl_IPValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_IPValue.Name = "lbl_IPValue";
+            this.lbl_IPValue.Size = new System.Drawing.Size(46, 20);
+            this.lbl_IPValue.TabIndex = 12;
+            this.lbl_IPValue.Text = "test IP";
+            this.lbl_IPValue.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lbl_IP
+            // 
+            this.lbl_IP.AutoSize = true;
+            this.lbl_IP.Location = new System.Drawing.Point(37, 24);
+            this.lbl_IP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_IP.Name = "lbl_IP";
+            this.lbl_IP.Size = new System.Drawing.Size(23, 20);
+            this.lbl_IP.TabIndex = 11;
+            this.lbl_IP.Text = "IP:";
+            this.lbl_IP.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lbl_QRLocation
+            // 
+            this.lbl_QRLocation.AutoSize = true;
+            this.lbl_QRLocation.Location = new System.Drawing.Point(37, 58);
+            this.lbl_QRLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_QRLocation.Name = "lbl_QRLocation";
+            this.lbl_QRLocation.Size = new System.Drawing.Size(83, 20);
+            this.lbl_QRLocation.TabIndex = 10;
+            this.lbl_QRLocation.Text = "test location";
+            this.lbl_QRLocation.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // btn_GenerateQR
+            // 
+            this.btn_GenerateQR.AllowAnimations = true;
+            this.btn_GenerateQR.BackColor = System.Drawing.Color.Transparent;
+            this.btn_GenerateQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GenerateQR.Location = new System.Drawing.Point(37, 93);
+            this.btn_GenerateQR.Name = "btn_GenerateQR";
+            this.btn_GenerateQR.PaintDefaultStateFill = true;
+            this.btn_GenerateQR.RoundedCornersMask = ((byte)(15));
+            this.btn_GenerateQR.Size = new System.Drawing.Size(176, 52);
+            this.btn_GenerateQR.TabIndex = 9;
+            this.btn_GenerateQR.Text = "Generate QR";
+            this.btn_GenerateQR.UseVisualStyleBackColor = true;
+            this.btn_GenerateQR.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
+            this.btn_GenerateQR.Click += new System.EventHandler(this.btn_GenerateQR_Click);
+            // 
             // backArrowControl1
             // 
             this.backArrowControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -239,6 +316,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 609);
+            this.Controls.Add(this.qrPanel);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Add);
@@ -256,13 +334,14 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();
+            this.qrPanel.ResumeLayout(false);
+            this.qrPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private CustomControls.BackArrowControl backArrowControl1;
-        private MetroFramework.Controls.MetroLabel lbl_Code;
         private VIBlend.WinForms.Controls.vTextBox tb_Search;
         private MetroFramework.Controls.MetroPanel detailsPanel;
         private In.Sontx.SimpleDataGridViewPaging.DataGridViewPaging dgv;
@@ -272,5 +351,11 @@
         private VIBlend.WinForms.Controls.vCircularButton btn_Add;
         private VIBlend.WinForms.Controls.vCircularButton btn_Edit;
         private VIBlend.WinForms.Controls.vCircularButton btn_Save;
+        private MetroFramework.Controls.MetroLabel lbl_Code;
+        private MetroFramework.Controls.MetroPanel qrPanel;
+        private MetroFramework.Controls.MetroLabel lbl_QRLocation;
+        private VIBlend.WinForms.Controls.GalleryButton btn_GenerateQR;
+        private MetroFramework.Controls.MetroLabel lbl_IPValue;
+        private MetroFramework.Controls.MetroLabel lbl_IP;
     }
 }

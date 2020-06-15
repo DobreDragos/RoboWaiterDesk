@@ -35,7 +35,7 @@ namespace RoboDesk.Forms.Base
         {
             view.Load += (s, e) =>
             {
-                SafeExecuteAction(() => {
+                View.SafeExecuteAction(() => {
                     view.DgvPaging.DataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     view.DgvPaging.DataGridView.AllowUserToAddRows = false;
                     view.DgvPaging.DataGridView.MultiSelect = false;
@@ -86,7 +86,7 @@ namespace RoboDesk.Forms.Base
 
         protected virtual void Btn_Delete_Click(object sender, EventArgs e)
         {
-            SafeExecuteAction(() => { 
+            View.SafeExecuteAction(() => { 
                 if (SelectedModel != null &&
                     MessageBox.Show(View, Properties.Resources.WAR_DELETE, Globals.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) 
                     == DialogResult.Yes)
@@ -100,7 +100,7 @@ namespace RoboDesk.Forms.Base
 
         protected virtual void Btn_Save_Click(object sender, EventArgs e)
         {
-            SafeExecuteAction(() =>
+            View.SafeExecuteAction(() =>
             {
                 View.VerifyView();
                 View.BindViewToModel(SelectedModel);
@@ -130,7 +130,7 @@ namespace RoboDesk.Forms.Base
 
         protected virtual void RefreshDatagrid(int pageOffset, int maxRecords)
         {
-            SafeExecuteAction(() =>
+            View.SafeExecuteAction(() =>
             {
                 View.DgvPaging.DataSource = GetGridPage(pageOffset, maxRecords);              
             });
@@ -187,19 +187,5 @@ namespace RoboDesk.Forms.Base
                     break;
             }
         }
-
-        private void SafeExecuteAction(Action a)
-        {
-            try
-            {
-                a();
-            }
-            catch (Exception ex)
-            {
-                Logger.LogHelper.Logger.Error(ex);
-                MyMessageBox.ShowException(View, ex);
-            }
-        }
-
     }
 }

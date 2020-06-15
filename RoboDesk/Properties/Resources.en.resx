@@ -305,4 +305,17 @@
     <value>Family Code</value>
     <comment>DGColumnTranslation</comment>
   </data>
+  <data name="LBL_IP" xml:space="preserve">
+    <value>IP:</value>
+  </data>
+  <data name="LBL_IPVALUE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LBL_QRLOCATION" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BTN_GENERATEQR" xml:space="preserve">
+    <value>Generate QR</value>
+    <comment>Translation</comment>
+  </data>
 </root>

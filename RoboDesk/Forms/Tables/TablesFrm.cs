@@ -17,6 +17,10 @@ using RoboDesk.Interfaces;
 using RoboDesk.Utils;
 using In.Sontx.SimpleDataGridViewPaging;
 using RoboDesk.CustomControls;
+using QRCodeLibrary;
+using System.Diagnostics;
+using System.IO;
+using RoboDesk.Util;
 
 namespace RoboDesk
 {
@@ -27,8 +31,14 @@ namespace RoboDesk
         {
             InitializeComponent();
             presenter = new TablesPresenter(this);
+
+            this.Load += (s, e) =>
+            {
+                this.lbl_IPValue.Text = QRUtils.GetIPAddress();
+                this.lbl_QRLocation.Text = Settings.Default.QrCodeLocation;
+            };
         }
-        
+
         public DataGridView Dgv => this.dgv.DataGridView;
 
         public Button Btn_Save => this.btn_Save;
@@ -64,7 +74,7 @@ namespace RoboDesk
         {
             if (tb_Code.Text == string.Empty)
                 throw new Exception("Code should not be empty!");
-            }
+        }
 
         public Tables BindViewToModel(Tables model)
         {
@@ -73,5 +83,31 @@ namespace RoboDesk
             return model;
         }
 
+        private void btn_GenerateQR_Click(object sender, EventArgs e)
+        {
+            this.SafeExecuteAction(() =>
+            {
+                if (!Directory.Exists(Settings.Default.QrCodeLocation))
+                {
+                    MyMessageBox.ShowDialog(this, $"QR location does not exist: {Settings.Default.QrCodeLocation}. Check config.", "Robo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DirectoryInfo directoryInfo = new DirectoryInfo(Settings.Default.QrCodeLocation);
+
+                    foreach (FileInfo file in directoryInfo.GetFiles("*.jpg"))
+                    {
+                        file.Delete();
+                    }
+                    List<Tables> tables = presenter.GetAll();
+                    List<string> tablesCodes = new List<string>();
+                    foreach (Tables table in tables)
+                        tablesCodes.Add(table.Token);
+                    string resultGenerateQR = QRCodeManager.GenerateQR(Settings.Default.QrCodeLocation, this.lbl_IPValue.Text, Settings.Default.Protocol, tablesCodes);
+                    MyMessageBox.ShowDialog(this, resultGenerateQR, "Robo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Process.Start(Settings.Default.QrCodeLocation);
+                }
+            });
+        }
     }
 }

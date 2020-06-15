@@ -40,5 +40,10 @@ namespace RoboDesk
             ((ITablesDE)DbAccess).Update(model);
         }
 
+        public List<Tables> GetAll()
+        {
+            return ((ITablesDE)DbAccess).GetAll();
+        }
+
     }
 }

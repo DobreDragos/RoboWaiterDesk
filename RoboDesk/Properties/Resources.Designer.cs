@@ -144,6 +144,15 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Genereaza QR.
+        /// </summary>
+        internal static string BTN_GENERATEQR {
+            get {
+                return ResourceManager.GetString("BTN_GENERATEQR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Logare.
         /// </summary>
         internal static string BTN_LOGIN {
@@ -415,6 +424,24 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IP:.
+        /// </summary>
+        internal static string LBL_IP {
+            get {
+                return ResourceManager.GetString("LBL_IP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string LBL_IPVALUE {
+            get {
+                return ResourceManager.GetString("LBL_IPVALUE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Produse Meniu.
         /// </summary>
         internal static string LBL_MENU_PRODUCTS {
@@ -447,6 +474,15 @@ namespace RoboDesk.Properties {
         internal static string LBL_PRICE {
             get {
                 return ResourceManager.GetString("LBL_PRICE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string LBL_QRLOCATION {
+            get {
+                return ResourceManager.GetString("LBL_QRLOCATION", resourceCulture);
             }
         }
         
