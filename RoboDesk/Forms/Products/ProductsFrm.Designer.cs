@@ -37,6 +37,10 @@
             this.btn_Save = new VIBlend.WinForms.Controls.vCircularButton();
             this.tb_Search = new VIBlend.WinForms.Controls.vTextBox();
             this.detailsPanel = new MetroFramework.Controls.MetroPanel();
+            this.lbl_Product_Picture = new MetroFramework.Controls.MetroLabel();
+            this.pb_Product_Image = new System.Windows.Forms.PictureBox();
+            this.btn_Product_Remove_Picture = new VIBlend.WinForms.Controls.GalleryButton();
+            this.btn_Product_Picture = new VIBlend.WinForms.Controls.GalleryButton();
             this.cb_DiscountIntervalType = new VIBlend.WinForms.Controls.vComboBox();
             this.lbl_DiscountInterval = new MetroFramework.Controls.MetroLabel();
             this.tb_DiscountInterval = new VIBlend.WinForms.Controls.vTextBox();
@@ -60,6 +64,7 @@
             this.ToolTip = new MetroFramework.Components.MetroToolTip();
             this.backArrowControl1 = new RoboDesk.CustomControls.BackArrowControl();
             this.detailsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Product_Image)).BeginInit();
             this.btn_Edit.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,6 +202,10 @@
             this.detailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.detailsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.detailsPanel.Controls.Add(this.lbl_Product_Picture);
+            this.detailsPanel.Controls.Add(this.pb_Product_Image);
+            this.detailsPanel.Controls.Add(this.btn_Product_Remove_Picture);
+            this.detailsPanel.Controls.Add(this.btn_Product_Picture);
             this.detailsPanel.Controls.Add(this.cb_DiscountIntervalType);
             this.detailsPanel.Controls.Add(this.lbl_DiscountInterval);
             this.detailsPanel.Controls.Add(this.tb_DiscountInterval);
@@ -222,12 +231,74 @@
             this.detailsPanel.Location = new System.Drawing.Point(31, 121);
             this.detailsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.detailsPanel.Name = "detailsPanel";
-            this.detailsPanel.Size = new System.Drawing.Size(1020, 224);
+            this.detailsPanel.Size = new System.Drawing.Size(1022, 301);
             this.detailsPanel.TabIndex = 26;
             this.detailsPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.detailsPanel.VerticalScrollbarBarColor = true;
             this.detailsPanel.VerticalScrollbarHighlightOnWheel = false;
             this.detailsPanel.VerticalScrollbarSize = 13;
+            // 
+            // lbl_Product_Picture
+            // 
+            this.lbl_Product_Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Product_Picture.AutoSize = true;
+            this.lbl_Product_Picture.BackColor = System.Drawing.Color.White;
+            this.lbl_Product_Picture.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_Product_Picture.Location = new System.Drawing.Point(487, 178);
+            this.lbl_Product_Picture.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Product_Picture.Name = "lbl_Product_Picture";
+            this.lbl_Product_Picture.Size = new System.Drawing.Size(47, 20);
+            this.lbl_Product_Picture.Style = MetroFramework.MetroColorStyle.White;
+            this.lbl_Product_Picture.TabIndex = 41;
+            this.lbl_Product_Picture.Text = "Image";
+            this.lbl_Product_Picture.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_Product_Picture.UseStyleColors = true;
+            // 
+            // pb_Product_Image
+            // 
+            this.pb_Product_Image.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_Product_Image.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Product_Image.BackgroundImage = global::RoboDesk.Properties.Resources.noimage;
+            this.pb_Product_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_Product_Image.Location = new System.Drawing.Point(633, 178);
+            this.pb_Product_Image.Name = "pb_Product_Image";
+            this.pb_Product_Image.Size = new System.Drawing.Size(146, 89);
+            this.pb_Product_Image.TabIndex = 40;
+            this.pb_Product_Image.TabStop = false;
+            // 
+            // btn_Product_Remove_Picture
+            // 
+            this.btn_Product_Remove_Picture.AllowAnimations = true;
+            this.btn_Product_Remove_Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Product_Remove_Picture.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Product_Remove_Picture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Product_Remove_Picture.Location = new System.Drawing.Point(806, 230);
+            this.btn_Product_Remove_Picture.Name = "btn_Product_Remove_Picture";
+            this.btn_Product_Remove_Picture.PaintDefaultStateFill = true;
+            this.btn_Product_Remove_Picture.RoundedCornersMask = ((byte)(15));
+            this.btn_Product_Remove_Picture.Size = new System.Drawing.Size(139, 37);
+            this.btn_Product_Remove_Picture.TabIndex = 39;
+            this.btn_Product_Remove_Picture.Text = "Remove picture";
+            this.btn_Product_Remove_Picture.UseVisualStyleBackColor = true;
+            this.btn_Product_Remove_Picture.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
+            this.btn_Product_Remove_Picture.Click += new System.EventHandler(this.btn_Product_Remove_Picture_Click);
+            // 
+            // btn_Product_Picture
+            // 
+            this.btn_Product_Picture.AllowAnimations = true;
+            this.btn_Product_Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Product_Picture.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Product_Picture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Product_Picture.Location = new System.Drawing.Point(806, 178);
+            this.btn_Product_Picture.Name = "btn_Product_Picture";
+            this.btn_Product_Picture.PaintDefaultStateFill = true;
+            this.btn_Product_Picture.RoundedCornersMask = ((byte)(15));
+            this.btn_Product_Picture.Size = new System.Drawing.Size(139, 37);
+            this.btn_Product_Picture.TabIndex = 38;
+            this.btn_Product_Picture.Text = "Get picture";
+            this.btn_Product_Picture.UseVisualStyleBackColor = true;
+            this.btn_Product_Picture.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE;
+            this.btn_Product_Picture.Click += new System.EventHandler(this.btn_Product_Picture_Click);
             // 
             // cb_DiscountIntervalType
             // 
@@ -238,7 +309,7 @@
             this.cb_DiscountIntervalType.DropDownMinimumSize = new System.Drawing.Size(10, 10);
             this.cb_DiscountIntervalType.DropDownResizeDirection = VIBlend.WinForms.Controls.SizingDirection.Both;
             this.cb_DiscountIntervalType.DropDownWidth = 118;
-            this.cb_DiscountIntervalType.Location = new System.Drawing.Point(825, 123);
+            this.cb_DiscountIntervalType.Location = new System.Drawing.Point(827, 67);
             this.cb_DiscountIntervalType.Margin = new System.Windows.Forms.Padding(4);
             this.cb_DiscountIntervalType.Name = "cb_DiscountIntervalType";
             this.cb_DiscountIntervalType.RoundedCornersMaskListItem = ((byte)(15));
@@ -256,7 +327,7 @@
             this.lbl_DiscountInterval.AutoSize = true;
             this.lbl_DiscountInterval.BackColor = System.Drawing.Color.White;
             this.lbl_DiscountInterval.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_DiscountInterval.Location = new System.Drawing.Point(485, 127);
+            this.lbl_DiscountInterval.Location = new System.Drawing.Point(487, 65);
             this.lbl_DiscountInterval.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DiscountInterval.Name = "lbl_DiscountInterval";
             this.lbl_DiscountInterval.Size = new System.Drawing.Size(113, 20);
@@ -274,7 +345,7 @@
             this.tb_DiscountInterval.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_DiscountInterval.DefaultText = "";
             this.tb_DiscountInterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_DiscountInterval.Location = new System.Drawing.Point(634, 123);
+            this.tb_DiscountInterval.Location = new System.Drawing.Point(633, 66);
             this.tb_DiscountInterval.Margin = new System.Windows.Forms.Padding(4);
             this.tb_DiscountInterval.MaxLength = 50;
             this.tb_DiscountInterval.MinimumSize = new System.Drawing.Size(133, 37);
@@ -294,7 +365,7 @@
             this.cb_Enabled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_Enabled.AutoSize = true;
             this.cb_Enabled.BackColor = System.Drawing.Color.Transparent;
-            this.cb_Enabled.Location = new System.Drawing.Point(922, 184);
+            this.cb_Enabled.Location = new System.Drawing.Point(917, 129);
             this.cb_Enabled.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_Enabled.Name = "cb_Enabled";
             this.cb_Enabled.Size = new System.Drawing.Size(18, 17);
@@ -308,7 +379,7 @@
             this.lbl_Enabled.AutoSize = true;
             this.lbl_Enabled.BackColor = System.Drawing.Color.White;
             this.lbl_Enabled.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_Enabled.Location = new System.Drawing.Point(841, 181);
+            this.lbl_Enabled.Location = new System.Drawing.Point(829, 126);
             this.lbl_Enabled.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Enabled.Name = "lbl_Enabled";
             this.lbl_Enabled.Size = new System.Drawing.Size(59, 20);
@@ -384,7 +455,7 @@
             this.tb_Discount.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Discount.DefaultText = "";
             this.tb_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Discount.Location = new System.Drawing.Point(634, 66);
+            this.tb_Discount.Location = new System.Drawing.Point(633, 16);
             this.tb_Discount.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Discount.MaxLength = 50;
             this.tb_Discount.MinimumSize = new System.Drawing.Size(133, 37);
@@ -406,7 +477,7 @@
             this.tb_Price.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Price.DefaultText = "";
             this.tb_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Price.Location = new System.Drawing.Point(634, 178);
+            this.tb_Price.Location = new System.Drawing.Point(633, 123);
             this.tb_Price.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Price.MaxLength = 50;
             this.tb_Price.MinimumSize = new System.Drawing.Size(133, 37);
@@ -422,13 +493,12 @@
             // 
             // tb_Description
             // 
-            this.tb_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Description.BackColor = System.Drawing.Color.White;
             this.tb_Description.BoundsOffset = new System.Drawing.Size(1, 1);
             this.tb_Description.ControlBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.tb_Description.DefaultText = "";
             this.tb_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_Description.Location = new System.Drawing.Point(634, 9);
+            this.tb_Description.Location = new System.Drawing.Point(109, 239);
             this.tb_Description.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Description.MaxLength = 250;
             this.tb_Description.MinimumSize = new System.Drawing.Size(133, 37);
@@ -437,7 +507,7 @@
             this.tb_Description.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_Description.SelectionLength = 0;
             this.tb_Description.SelectionStart = 0;
-            this.tb_Description.Size = new System.Drawing.Size(309, 37);
+            this.tb_Description.Size = new System.Drawing.Size(339, 37);
             this.tb_Description.TabIndex = 27;
             this.tb_Description.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_Description.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.BLUEBLEND;
@@ -449,7 +519,7 @@
             this.lbl_Discount.AutoSize = true;
             this.lbl_Discount.BackColor = System.Drawing.Color.White;
             this.lbl_Discount.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_Discount.Location = new System.Drawing.Point(483, 73);
+            this.lbl_Discount.Location = new System.Drawing.Point(487, 11);
             this.lbl_Discount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Discount.Name = "lbl_Discount";
             this.lbl_Discount.Size = new System.Drawing.Size(63, 20);
@@ -465,7 +535,7 @@
             this.lbl_Price.AutoSize = true;
             this.lbl_Price.BackColor = System.Drawing.Color.White;
             this.lbl_Price.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_Price.Location = new System.Drawing.Point(485, 181);
+            this.lbl_Price.Location = new System.Drawing.Point(487, 123);
             this.lbl_Price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Price.Name = "lbl_Price";
             this.lbl_Price.Size = new System.Drawing.Size(40, 20);
@@ -477,11 +547,10 @@
             // 
             // lbl_Description
             // 
-            this.lbl_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Description.AutoSize = true;
             this.lbl_Description.BackColor = System.Drawing.Color.White;
             this.lbl_Description.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_Description.Location = new System.Drawing.Point(485, 12);
+            this.lbl_Description.Location = new System.Drawing.Point(13, 247);
             this.lbl_Description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Description.Name = "lbl_Description";
             this.lbl_Description.Size = new System.Drawing.Size(79, 20);
@@ -521,11 +590,11 @@
             this.dgv.AutoHideNavigator = false;
             this.dgv.BackColor = System.Drawing.SystemColors.Control;
             this.dgv.DataSource = null;
-            this.dgv.Location = new System.Drawing.Point(31, 362);
+            this.dgv.Location = new System.Drawing.Point(31, 457);
             this.dgv.Margin = new System.Windows.Forms.Padding(5);
             this.dgv.MaxRecords = 20;
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(1020, 218);
+            this.dgv.Size = new System.Drawing.Size(1020, 123);
             this.dgv.TabIndex = 28;
             // 
             // btn_Edit
@@ -639,6 +708,7 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Product_Image)).EndInit();
             this.btn_Edit.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -675,5 +745,9 @@
         private VIBlend.WinForms.Controls.vTextBox tb_DiscountInterval;
         private MetroFramework.Components.MetroToolTip ToolTip;
         private VIBlend.WinForms.Controls.vComboBox cb_DiscountIntervalType;
+        private VIBlend.WinForms.Controls.GalleryButton btn_Product_Picture;
+        private VIBlend.WinForms.Controls.GalleryButton btn_Product_Remove_Picture;
+        private System.Windows.Forms.PictureBox pb_Product_Image;
+        private MetroFramework.Controls.MetroLabel lbl_Product_Picture;
     }
 }

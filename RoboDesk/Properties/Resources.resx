@@ -117,113 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LBL_USER" xml:space="preserve">
-    <value>Utilizator</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="BTN_LOGIN" xml:space="preserve">
-    <value>Logare</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="LBL_PASS" xml:space="preserve">
-    <value>Parola</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="android_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\android-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TB_PASS" xml:space="preserve">
-    <value>Introduceti parola</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="TB_USER" xml:space="preserve">
-    <value>Introduceti nume utilizator</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="ro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="en" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ERR_LOGIN_FAILED" xml:space="preserve">
-    <value>Numele utilizator si/sau parola sunt incorecte!</value>
-    <comment>ERR</comment>
-  </data>
-  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BTN_ALERGENS" xml:space="preserve">
-    <value>Alergeni</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="BTN_MENUS" xml:space="preserve">
-    <value>Meniuri</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="BTN_PRODUCTS" xml:space="preserve">
-    <value>Produse</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="BTN_SETTINGS" xml:space="preserve">
-    <value>Setari</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="BTN_CATEGORIES" xml:space="preserve">
+  <data name="CategoriesFrm" xml:space="preserve">
     <value>Categorii</value>
-    <comment>FormTranslation</comment>
+    <comment>Translation</comment>
   </data>
-  <data name="BTN_TABLES" xml:space="preserve">
+  <data name="TablesFrm" xml:space="preserve">
     <value>Mese</value>
-    <comment>FormTranslation</comment>
+    <comment>Translation</comment>
   </data>
-  <data name="LBL_CODE" xml:space="preserve">
-    <value>Cod</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="LBL_DISCOUNT" xml:space="preserve">
-    <value>Discount</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="LBL_NAME" xml:space="preserve">
-    <value>Nume</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="LBL_PRICE" xml:space="preserve">
-    <value>Pret</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="LBL_DESCRIPTION" xml:space="preserve">
-    <value>Descriere</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="LBL_FAMILY" xml:space="preserve">
-    <value>Familie</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="BTN_ADD" xml:space="preserve">
-    <value>ADAUGA</value>
-    <comment>FormTranslation</comment>
-  </data>
-  <data name="BTN_DELETE" xml:space="preserve">
-    <value>STERGE</value>
+  <data name="LBL_ENABLED" xml:space="preserve">
+    <value>Activat</value>
     <comment>FormTranslation</comment>
   </data>
   <data name="BTN_EDIT" xml:space="preserve">
     <value>MODIFICA</value>
     <comment>FormTranslation</comment>
   </data>
-  <data name="BTN_SAVE" xml:space="preserve">
-    <value>SALVEAZA</value>
+  <data name="BTN_TABLES" xml:space="preserve">
+    <value>Mese</value>
     <comment>FormTranslation</comment>
   </data>
-  <data name="CB_DEFAULT_SELECT" xml:space="preserve">
-    <value>Selecteaza item...</value>
+  <data name="TB_USER" xml:space="preserve">
+    <value>Introduceti nume utilizator</value>
     <comment>FormTranslation</comment>
   </data>
-  <data name="LBL_ENABLED" xml:space="preserve">
-    <value>Activat</value>
+  <data name="LBL_EXISTING_PRODUCTS" xml:space="preserve">
+    <value>Produse Existente</value>
+    <comment>Translate</comment>
+  </data>
+  <data name="LBL_IPVALUE" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LBL_FAMILY" xml:space="preserve">
+    <value>Familie</value>
     <comment>FormTranslation</comment>
   </data>
   <data name="CB_ENABLED" xml:space="preserve">
@@ -234,45 +164,24 @@
     <value>Cauta...</value>
     <comment>FormTranslation</comment>
   </data>
-  <data name="WAR_DELETE" xml:space="preserve">
-    <value>Sunteti sigur ca vreti sa stergeti aceasta inregistrare?</value>
-    <comment>WAR</comment>
-  </data>
-  <data name="DGV_CODE" xml:space="preserve">
-    <value>Cod</value>
-    <comment>DGColumnTranslation</comment>
-  </data>
-  <data name="DGV_DISCOUNT" xml:space="preserve">
-    <value>Discount</value>
-    <comment>DGColumnTranslation</comment>
-  </data>
-  <data name="DGV_PRICE" xml:space="preserve">
-    <value>Pret</value>
-    <comment>DGColumnTranslation</comment>
-  </data>
-  <data name="DGV_NAME" xml:space="preserve">
+  <data name="LBL_NAME" xml:space="preserve">
     <value>Nume</value>
-    <comment>DGColumnTranslation</comment>
-  </data>
-  <data name="ERR_UNKNOWN" xml:space="preserve">
-    <value>O eroare neprevazuta a aparut ! Cod eroare {1}</value>
-    <comment>ERR</comment>
-  </data>
-  <data name="BTN_CANCEL" xml:space="preserve">
-    <value>Anuleaza</value>
     <comment>FormTranslation</comment>
   </data>
-  <data name="BTN_ADD_PROD" xml:space="preserve">
-    <value>&lt;&lt;</value>
-    <comment>Translate</comment>
-  </data>
-  <data name="BTN_REMOVE_PROD" xml:space="preserve">
-    <value>&gt;&gt;</value>
-    <comment>Translate</comment>
+  <data name="LBL_CODE" xml:space="preserve">
+    <value>Cod</value>
+    <comment>FormTranslation</comment>
   </data>
   <data name="DGV_ALERGENS" xml:space="preserve">
     <value>Alergeni</value>
     <comment>DGColumnTranslation</comment>
+  </data>
+  <data name="BTN_PRODUCT_REMOVE_PICTURE" xml:space="preserve">
+    <value>Sterge imagine</value>
+  </data>
+  <data name="LBL_DISCOUNTINTERVAL" xml:space="preserve">
+    <value>Interval Discount</value>
+    <comment>Translation</comment>
   </data>
   <data name="DGV_TOKEN" xml:space="preserve">
     <value>Token Masa</value>
@@ -282,61 +191,164 @@
     <value>Alergeni</value>
     <comment>Translation</comment>
   </data>
-  <data name="TablesFrm" xml:space="preserve">
-    <value>Mese</value>
-    <comment>Translation</comment>
-  </data>
-  <data name="CategoriesFrm" xml:space="preserve">
-    <value>Categorii</value>
-    <comment>Translation</comment>
-  </data>
-  <data name="LBL_EXISTING_PRODUCTS" xml:space="preserve">
-    <value>Produse Existente</value>
+  <data name="BTN_REMOVE_PROD" xml:space="preserve">
+    <value>&gt;&gt;</value>
     <comment>Translate</comment>
   </data>
-  <data name="LBL_MENU_PRODUCTS" xml:space="preserve">
-    <value>Produse Meniu</value>
-    <comment>Translate</comment>
+  <data name="android_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\android-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginFrm" xml:space="preserve">
-    <value>RoboDesk</value>
+  <data name="LBL_IP" xml:space="preserve">
+    <value>IP:</value>
+  </data>
+  <data name="LBL_DESCRIPTION" xml:space="preserve">
+    <value>Descriere</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="BTN_GENERATEQR" xml:space="preserve">
+    <value>Genereaza QR</value>
     <comment>Translation</comment>
   </data>
-  <data name="MainFrm" xml:space="preserve">
-    <value>RoboDesk</value>
-    <comment>Translation</comment>
+  <data name="BTN_CANCEL" xml:space="preserve">
+    <value>Anuleaza</value>
+    <comment>FormTranslation</comment>
   </data>
-  <data name="ProductsFrm" xml:space="preserve">
-    <value>Produse</value>
-    <comment>Translation</comment>
+  <data name="LBL_PRICE" xml:space="preserve">
+    <value>Pret</value>
+    <comment>FormTranslation</comment>
   </data>
-  <data name="LBL_CATEGORYNAME" xml:space="preserve">
-    <value>Nume categorie</value>
-    <comment>Translation</comment>
+  <data name="BTN_SAVE" xml:space="preserve">
+    <value>SALVEAZA</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="BTN_MENUS" xml:space="preserve">
+    <value>Meniuri</value>
+    <comment>FormTranslation</comment>
   </data>
   <data name="LBL_CATEGORYCODE" xml:space="preserve">
     <value>Cod</value>
     <comment>Translate</comment>
   </data>
-  <data name="LBL_DISCOUNTINTERVAL" xml:space="preserve">
-    <value>Interval Discount</value>
-    <comment>Translation</comment>
+  <data name="BTN_ALERGENS" xml:space="preserve">
+    <value>Alergeni</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="DGV_PRICE" xml:space="preserve">
+    <value>Pret</value>
+    <comment>DGColumnTranslation</comment>
+  </data>
+  <data name="LBL_DISCOUNT" xml:space="preserve">
+    <value>Discount</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="ro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN_ADD_PROD" xml:space="preserve">
+    <value>&lt;&lt;</value>
+    <comment>Translate</comment>
+  </data>
+  <data name="LBL_QRLOCATION" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LBL_PRODUCT_PICTURE" xml:space="preserve">
+    <value>Imagine</value>
+  </data>
+  <data name="BTN_PRODUCTS" xml:space="preserve">
+    <value>Produse</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="LBL_PASS" xml:space="preserve">
+    <value>Parola</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="CB_DEFAULT_SELECT" xml:space="preserve">
+    <value>Selecteaza item...</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="BTN_CATEGORIES" xml:space="preserve">
+    <value>Categorii</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="LBL_USER" xml:space="preserve">
+    <value>Utilizator</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="WAR_DELETE" xml:space="preserve">
+    <value>Sunteti sigur ca vreti sa stergeti aceasta inregistrare?</value>
+    <comment>WAR</comment>
+  </data>
+  <data name="DGV_NAME" xml:space="preserve">
+    <value>Nume</value>
+    <comment>DGColumnTranslation</comment>
   </data>
   <data name="DGV_FAMILYCODE" xml:space="preserve">
     <value>Cod Familie</value>
     <comment>DGColumnTranslation</comment>
   </data>
-  <data name="LBL_IP" xml:space="preserve">
-    <value>IP:</value>
-  </data>
-  <data name="LBL_IPVALUE" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LBL_QRLOCATION" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BTN_GENERATEQR" xml:space="preserve">
-    <value>Genereaza QR</value>
+  <data name="ProductsFrm" xml:space="preserve">
+    <value>Produse</value>
     <comment>Translation</comment>
+  </data>
+  <data name="en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TB_PASS" xml:space="preserve">
+    <value>Introduceti parola</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="LoginFrm" xml:space="preserve">
+    <value>RoboDesk</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="BTN_ADD" xml:space="preserve">
+    <value>ADAUGA</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="BTN_PRODUCT_PICTURE" xml:space="preserve">
+    <value>Incarca imagine</value>
+  </data>
+  <data name="DGV_CODE" xml:space="preserve">
+    <value>Cod</value>
+    <comment>DGColumnTranslation</comment>
+  </data>
+  <data name="LBL_MENU_PRODUCTS" xml:space="preserve">
+    <value>Produse Meniu</value>
+    <comment>Translate</comment>
+  </data>
+  <data name="BTN_LOGIN" xml:space="preserve">
+    <value>Logare</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="ERR_UNKNOWN" xml:space="preserve">
+    <value>O eroare neprevazuta a aparut ! Cod eroare {1}</value>
+    <comment>ERR</comment>
+  </data>
+  <data name="ERR_LOGIN_FAILED" xml:space="preserve">
+    <value>Numele utilizator si/sau parola sunt incorecte!</value>
+    <comment>ERR</comment>
+  </data>
+  <data name="BTN_SETTINGS" xml:space="preserve">
+    <value>Setari</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="BTN_DELETE" xml:space="preserve">
+    <value>STERGE</value>
+    <comment>FormTranslation</comment>
+  </data>
+  <data name="LBL_CATEGORYNAME" xml:space="preserve">
+    <value>Nume categorie</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="DGV_DISCOUNT" xml:space="preserve">
+    <value>Discount</value>
+    <comment>DGColumnTranslation</comment>
+  </data>
+  <data name="MainFrm" xml:space="preserve">
+    <value>RoboDesk</value>
+    <comment>Translation</comment>
+  </data>
+  <data name="noimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\noimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

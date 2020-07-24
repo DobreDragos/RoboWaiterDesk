@@ -19,6 +19,7 @@ using In.Sontx.SimpleDataGridViewPaging;
 using RoboDesk.CustomControls;
 using VIBlend.WinForms.Controls;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace RoboDesk
 {
@@ -53,6 +54,8 @@ namespace RoboDesk
         public Panel Details_Panel => this.detailsPanel;
 
         public DataGridViewPaging DgvPaging => this.dgv;
+
+        public PictureBox PicBox => this.pb_Product_Image;
 
         public Button Btn_Cancel => this.btn_Cancel;
 
@@ -94,6 +97,18 @@ namespace RoboDesk
             cb_Enabled.Checked = selectedModel.Enabled;
             tb_DiscountInterval.Text = selectedModel.DiscountStart == null ? "" : $"{selectedModel.DiscountStart.Value.ToString("HH:mm")}-{selectedModel.DiscountEnd.Value.ToString("HH:mm")}"; ;
             cb_DiscountIntervalType.SelectedValue = selectedModel.DiscountType;
+            string imageFile = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}.jpg", selectedModel.Code));
+            
+            if (File.Exists(imageFile))
+            {
+                this.presenter.SetProductImage(imageFile);
+                this.btn_Product_Remove_Picture.Enabled = true;
+            }
+            else
+            {
+                this.presenter.SetProductImage();
+                this.btn_Product_Remove_Picture.Enabled = false;
+            }
         }
 
         public void VerifyView()
@@ -176,5 +191,60 @@ namespace RoboDesk
             var selectedLangId = (cb_Language.SelectedValue as long?).GetValueOrDefault();
             EditedLangToDescription[selectedLangId] = tb_Description.Text;
         }
+
+        private void btn_Product_Picture_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Only jpg images|*.jpg";
+                openFileDialog.Multiselect = false;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string fileLocation = openFileDialog.FileName;
+                    string fileDestinationAddTemp = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}_addtemp.jpg", tb_Code.Text));
+
+                    this.presenter.SetProductImage();
+                    File.Copy(fileLocation, fileDestinationAddTemp, true);
+                    this.presenter.SetProductImage(fileDestinationAddTemp);
+                    this.btn_Product_Remove_Picture.Enabled = true;
+                }
+            }
+            catch(Exception ex)
+            {
+                MyMessageBox.ShowDialog(this, $"Error occured while getting image.", "Robo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_Product_Remove_Picture_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string fileLocation = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}.jpg", tb_Code.Text));
+                string fileLocationAddTemp = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}_addtemp.jpg", tb_Code.Text));
+                string fileLocationDeleteTemp = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}_deletetemp.jpg", tb_Code.Text));
+                
+                this.presenter.SetProductImage();
+
+                if (File.Exists(fileLocation))
+                {
+                    File.Copy(fileLocation, fileLocationDeleteTemp, true);
+                    File.Delete(fileLocation);
+                }
+
+                if (File.Exists(fileLocationAddTemp))
+                {
+                    File.Delete(fileLocationAddTemp);
+                }
+                    
+                this.btn_Product_Remove_Picture.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MyMessageBox.ShowDialog(this, $"Error occured while removing image.", "Robo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

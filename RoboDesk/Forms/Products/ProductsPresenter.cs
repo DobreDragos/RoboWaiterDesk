@@ -11,6 +11,11 @@ using System.Collections.Generic;
 using DataLayerHelper.Enums;
 using System.Linq;
 using BusinessLayerStandard.Extensions;
+using System.IO;
+using RoboDesk.Properties;
+using System.Drawing;
+using System.Threading;
+using Logger;
 
 namespace RoboDesk
 {
@@ -43,6 +48,130 @@ namespace RoboDesk
             cb.DisplayMember = "Item2";
             cb.ValueMember = "Item1";
             cb.DataSource = myList;
+        }
+
+        protected override void Btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.CancelTempPictures();
+            base.Btn_Cancel_Click(sender, e);
+        }
+
+        protected override void Btn_Back_Click(object sender, EventArgs e)
+        {
+            this.CancelTempPictures();
+            base.Btn_Back_Click(sender, e);
+        }
+        
+
+        protected override void Btn_Save_Click(object sender, EventArgs e)
+        {
+            this.SaveTempPictures();
+            base.Btn_Save_Click(sender, e);
+        }
+
+        protected override void DeleteModel()
+        {
+            this.DeleteProductPicture();
+            base.DeleteModel();
+        }
+
+        public void SetProductImage(string fileLocation = "")
+        {
+            try
+            {
+                this.View.PicBox.BackgroundImage?.Dispose();
+                if (string.IsNullOrEmpty(fileLocation))
+                    this.View.PicBox.BackgroundImage = new Bitmap(Resources.noimage);
+                else
+                    this.View.PicBox.BackgroundImage = GetCopyImage(fileLocation);
+            }
+            catch(Exception ex)
+            {
+                LogHelper.Logger.Error(ex);
+            }
+        }
+
+        private Image GetCopyImage(string path)
+        {
+            using (Image image = Image.FromFile(path))
+            {
+                Bitmap bitmap = new Bitmap(image);
+                return bitmap;
+            }
+        }
+
+        private void SaveTempPictures()
+        {
+            try
+            {
+                string fileLocation = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}.jpg", this.SelectedModel.Code));
+                string fileLocationAddTemp = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}_addtemp.jpg", this.SelectedModel.Code));
+                string fileLocationDeleteTemp = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}_deletetemp.jpg", this.SelectedModel.Code));
+                if (File.Exists(fileLocationAddTemp))
+                {
+                    File.Copy(fileLocationAddTemp, fileLocation, true);
+                    SetProductImage(fileLocation);
+                    File.Delete(fileLocationAddTemp);
+                }
+
+                if (File.Exists(fileLocationDeleteTemp))
+                {
+                    File.Delete(fileLocationDeleteTemp);
+                }
+            }
+            catch(Exception ex)
+            {
+                LogHelper.Logger.Error(ex);
+            }
+        }
+
+        private void CancelTempPictures()
+        {
+            try
+            {
+                string fileLocation = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}.jpg", this.SelectedModel.Code));
+                string fileLocationAddTemp = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}_addtemp.jpg", this.SelectedModel.Code));
+                string fileLocationDeleteTemp = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}_deletetemp.jpg", this.SelectedModel.Code));
+
+                SetProductImage();
+
+                if (File.Exists(fileLocationAddTemp))
+                {
+                    File.Delete(fileLocationAddTemp);
+                }
+
+                if (File.Exists(fileLocationDeleteTemp))
+                {
+                    File.Copy(fileLocationDeleteTemp, fileLocation, true);
+                    File.Delete(fileLocationDeleteTemp);
+                }
+
+                if (File.Exists(fileLocation))
+                {
+                    SetProductImage(fileLocation);
+                }
+            }
+            catch(Exception ex)
+            {
+                LogHelper.Logger.Error(ex);
+            }
+        }
+
+        private void DeleteProductPicture()
+        {
+            try
+            {
+                string fileLocation = Path.Combine(Settings.Default.ProductPictureLocation, string.Format("{0}.jpg", this.SelectedModel.Code));
+                if (File.Exists(fileLocation))
+                {
+                    SetProductImage();
+                    File.Delete(fileLocation);
+                }
+            }
+            catch(Exception ex)
+            {
+                LogHelper.Logger.Error(ex);
+            }
         }
 
         public string GetNameBySelectedLanguage(long languageId, long selectedId)

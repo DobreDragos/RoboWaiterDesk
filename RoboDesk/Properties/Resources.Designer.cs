@@ -171,6 +171,24 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incarca imagine.
+        /// </summary>
+        internal static string BTN_PRODUCT_PICTURE {
+            get {
+                return ResourceManager.GetString("BTN_PRODUCT_PICTURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sterge imagine.
+        /// </summary>
+        internal static string BTN_PRODUCT_REMOVE_PICTURE {
+            get {
+                return ResourceManager.GetString("BTN_PRODUCT_REMOVE_PICTURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Produse.
         /// </summary>
         internal static string BTN_PRODUCTS {
@@ -478,6 +496,15 @@ namespace RoboDesk.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Imagine.
+        /// </summary>
+        internal static string LBL_PRODUCT_PICTURE {
+            get {
+                return ResourceManager.GetString("LBL_PRODUCT_PICTURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         internal static string LBL_QRLOCATION {
@@ -510,6 +537,16 @@ namespace RoboDesk.Properties {
         internal static string MainFrm {
             get {
                 return ResourceManager.GetString("MainFrm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap noimage {
+            get {
+                object obj = ResourceManager.GetObject("noimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

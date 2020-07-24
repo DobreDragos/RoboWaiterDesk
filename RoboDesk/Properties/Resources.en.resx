@@ -318,4 +318,13 @@
     <value>Generate QR</value>
     <comment>Translation</comment>
   </data>
+  <data name="BTN_PRODUCT_PICTURE" xml:space="preserve">
+    <value>Choose image</value>
+  </data>
+  <data name="LBL_PRODUCT_PICTURE" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="BTN_PRODUCT_REMOVE_PICTURE" xml:space="preserve">
+    <value>Delete image</value>
+  </data>
 </root>

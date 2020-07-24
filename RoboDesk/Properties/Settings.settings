@@ -14,5 +14,8 @@
     <Setting Name="Protocol" Type="System.String" Scope="User">
       <Value Profile="(Default)">http</Value>
     </Setting>
+    <Setting Name="ProductPictureLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Valentina\source\repos\TestNodeJs\appserver\img\products</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

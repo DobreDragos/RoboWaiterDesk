@@ -70,5 +70,17 @@ namespace RoboDesk.Properties {
                 this["Protocol"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Valentina\\source\\repos\\TestNodeJs\\appserver\\img\\products")]
+        public string ProductPictureLocation {
+            get {
+                return ((string)(this["ProductPictureLocation"]));
+            }
+            set {
+                this["ProductPictureLocation"] = value;
+            }
+        }
     }
 }

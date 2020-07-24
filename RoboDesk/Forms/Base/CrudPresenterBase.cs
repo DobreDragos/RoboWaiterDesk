@@ -91,11 +91,16 @@ namespace RoboDesk.Forms.Base
                     MessageBox.Show(View, Properties.Resources.WAR_DELETE, Globals.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) 
                     == DialogResult.Yes)
                 {
-                    ExecuteDeleteDb(SelectedModel);
-                    var crtPage = View.DgvPaging.CurrentPage;
-                    RefreshDatagrid((View.DgvPaging.CurrentPage-1) * View.DgvPaging.MaxRecords , View.DgvPaging.MaxRecords);
+                    DeleteModel();
                 }
             });
+        }
+
+        protected virtual void DeleteModel()
+        {
+            ExecuteDeleteDb(SelectedModel);
+            var crtPage = View.DgvPaging.CurrentPage;
+            RefreshDatagrid((View.DgvPaging.CurrentPage - 1) * View.DgvPaging.MaxRecords, View.DgvPaging.MaxRecords);
         }
 
         protected virtual void Btn_Save_Click(object sender, EventArgs e)
